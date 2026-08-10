@@ -10,3 +10,7 @@ button, input { font:inherit; }
 button { cursor:pointer; }
 :focus-visible { outline:3px solid #ff9aa6; outline-offset:3px; }
 .scrollbar::-webkit-scrollbar { width:7px; }.scrollbar::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:10px; }
+.tooltip { pointer-events:none; position:absolute; left:56px; z-index:50; display:none; white-space:nowrap; border-radius:6px; background:#111827; padding:4px 8px; font-size:12px; font-weight:600; color:white; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+.group:hover > .tooltip { display:block; }
+.menu-item { display:flex; width:100%; align-items:center; gap:12px; border-radius:8px; padding:10px 12px; text-align:left; font-size:14px; font-weight:600; }
+.menu-item:hover { background:#f4f4f5; }
