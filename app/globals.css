@@ -16,3 +16,9 @@ textarea:focus-visible { outline:none; }
 .group:hover > .tooltip { display:block; }
 .menu-item { display:flex; width:100%; align-items:center; gap:12px; border-radius:8px; padding:10px 12px; text-align:left; font-size:14px; font-weight:600; }
 .menu-item:hover { background:#f4f4f5; }
+.action-card { animation:action-card-enter .32s both cubic-bezier(.2,.8,.2,1); transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.action-card:hover { border-color:var(--sg-red); box-shadow:0 10px 22px rgba(31,31,31,.08); transform:translateY(-2px); }
+.action-card-icon { transition:background-color .2s ease, color .2s ease, transform .2s ease; }
+.action-card:hover .action-card-icon { background:#fff0f1; color:var(--sg-red); transform:scale(1.06); }
+@keyframes action-card-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@media (prefers-reduced-motion:reduce) { *,::before,::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }

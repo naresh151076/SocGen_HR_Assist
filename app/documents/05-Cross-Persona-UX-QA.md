@@ -64,6 +64,10 @@ Requirements:
 - Keyboard navigation exposes focus, reaches all actions and works in modal/dialog states.
 - Status never relies on colour alone.
 - Cards stack cleanly at tablet/mobile; evidence/details can collapse without hiding key decision context.
+- Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected.
+- New-chat replies use the shared conversation-resource model: each persona receives fictional, role-relevant supporting material (brief, checklist, or evidence note), never a claim of a live document or system record.
+- Every new-chat shortcut uses a task-relevant Lucide icon from the shared `QuickActions` component; icons must not mix libraries or visual styles.
+- Panel and disclosure motion is short, functional, and disabled for users with `prefers-reduced-motion`.
 - UI does not display raw prompts, model explanations, API payloads or a visible agent swarm.
 
 ## 7. POC honesty tests

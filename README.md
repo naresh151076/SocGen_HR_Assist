@@ -23,7 +23,12 @@ The assistant can prepare, check, recommend, and simulate approved work. It must
 - A collapsible persona-aware navigation rail, with projects and recent conversations.
 - A mobile navigation drawer.
 - A centre-only scrolling workspace. The left rail and optional right context panel remain fixed within the viewport.
-- An expandable **Live context / Request details** panel for an active Radu conversation.
+- A time-aware, persona-named landing greeting with a compact **Registration updates** chart; the rail and mobile logos return to it, and the connected demo starts from its top-right **Demo flow** button.
+- A persistent rail-edge control that overlaps the navigation and workspace so collapse and expand remain available in both rail states.
+- Conversation-linked supporting documents: a fictional brief, checklist, or evidence note opens the expandable right panel only when a user selects that resource.
+- Persona-specific quick-action cards beneath every new-chat composer, with a left-aligned Lucide icon, clear chevron affordance, red hover border, and reduced-motion-safe feedback.
+- Claire's **Team learning** view: a contextual cohort infographic with deadline readiness, request journey, confirmed routes and a conversational Thomas follow-up.
+- Claire's **Help** view: task-led prompts, clear decision ownership, and explicit assistant guardrails.
 - Accessible labels, visible focus treatment, and responsive card layouts.
 
 ### Connected persona case
@@ -38,6 +43,8 @@ The flagship interactive demo follows a fictional **New Manager Foundations** re
 6. Elena reviews an INV-04 invitation-control exception, approves a contained remediation, and sees the re-check pass.
 
 Each role has persona-aware navigation, a conversational state, evidence, and an explicit ownership boundary. The scenario is intentionally governed: no completion state is shown until the relevant human approval.
+
+Claire’s **My requests** workspace is a connected-case status view: it visualises the 11 of 12 confirmed learning paths, exposes the remaining Thomas follow-up, and routes comparison or new-request work back into the conversational assistant. It does not create live requests or complete registrations.
 
 ## Demo data and boundaries
 

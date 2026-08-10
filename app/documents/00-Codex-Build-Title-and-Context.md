@@ -50,6 +50,8 @@ Do **not** make Mandarin, MyLearning, HR Data/SWS, Neocase, Outlook, Excel or SA
 
 - Société Générale-inspired, not copied: white workspace, near-black text, restrained SG red for key action/status, soft neutral borders.
 - Conversation is the centre of the screen. Use concise assistant turns, structured proposal cards, and one clear decision at a time.
+- Context is conversation-linked, never panel-led: a relevant assistant message may link to a fictional brief, checklist or evidence note, which opens the right panel on demand. Do not show a generic Details button or open the panel automatically.
+- Do not repeat the signed-in persona’s role, location or explanatory subtitle around a screen title. The left rail supplies persona context; pages lead directly with the task title. Starter cards are title-only. A guided case may use one compact demo pill.
 - Desktop-first and responsive to tablet/mobile. On mobile, surface a single primary action and collapse evidence/details.
 - Preserve these status terms across every screen: Draft, Ready for review, Needs decision, Approved, In progress, Complete, Follow-up required, Control exception and Control passed.
 - Preserve the canonical count baseline: **12 requested → 10 ready → 2 exceptions → 11 confirmed → 1 follow-up.**

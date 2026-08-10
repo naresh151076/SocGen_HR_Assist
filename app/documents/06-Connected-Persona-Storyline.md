@@ -32,14 +32,24 @@ Claire requests training. Amélie validates and publishes the feasible session. 
 7. Claire chooses Priya’s alternative and keeps Thomas open.
 8. Radu approves 11 registrations and 11 invitations.
 9. Radu sees completion and operational evidence.
-10. Claire sees request status and Thomas’s follow-up.
+10. Claire sees a selectable My requests workspace with the team-request progress infographic, retained evidence, and Thomas’s follow-up decision.
 11. Elena opens the weekly INV-04 exception.
 12. Elena approves the one-invitation remediation.
 13. Elena sees the re-check pass and audit evidence complete.
 
-## Navigation rule
+## Landing and navigation rule
+
+The default Assistant landing page greets the signed-in persona by first name using the browser's local time (Good morning, Good afternoon, or Good evening). A compact Registration updates chart sits below the greeting. The **Demo flow** button in the top-right corner starts the connected case at state 1. Selecting the Société Générale logo in either rail state returns to this landing page and exits any demo or conversation state.
 
 Amélie, Radu and Elena use Assistant, Operations, Controls and Reports. Claire uses Assistant, My requests, Team learning and Help. Projects and Recent conversations are shared rail organisers only. Mandarin, MyLearning, HR Data/SWS, Outlook and Neocase are evidence or planned-action references, never left-navigation destinations.
+
+When a new conversation begins, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
+
+Claire's Team learning destination is a local, supporting visual summary of the same case: 12 requested, 11 confirmed routes, and Thomas's one open business follow-up. Its calls to action return to a conversational assistant, not a live learner-record system. Help gives task-led prompts and repeats the approval boundary for business, planning and operational decisions.
+
+## Presentation rule
+
+Do not use an eyebrow, persona label, or explanatory subtitle to introduce a screen title: the signed-in persona is already visible in the left rail. Lead with one meaningful title. Preserve factual field captions and accessible labels where they aid comprehension. Persona-specific starter actions use title-only cards. The guided case may use one compact `Guided demo · NMF-042` pill, but no persona banner or descriptive header copy.
 
 ## Governance rule
 

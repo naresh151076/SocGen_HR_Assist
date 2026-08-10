@@ -2,7 +2,7 @@
 
 ## Status of this document
 
-This is the target-flow specification for the business-manager experience. The current POC implements Claire's demand submission, business trade-off for Priya and Thomas, 11-person plan confirmation, and role-restricted navigation. Detailed cohort editing, persistence, and notifications remain planned work. See `07-Implementation-Guide.md` for current coverage.
+This is the target-flow specification for the business-manager experience. The current POC implements Claire's demand submission, business trade-off for Priya and Thomas, 11-person plan confirmation, detailed My requests, Team learning and Help support views, and role-restricted navigation. Detailed cohort editing, persistence, and notifications remain planned work. See `07-Implementation-Guide.md` for current coverage.
 
 ## Story title
 
@@ -28,6 +28,8 @@ Baseline: 12 people; 18 September recommended session; 10 ready; Priya has a cal
 ## Screen flow
 
 ### C1 — Conversation home
+
+The shared landing page first shows the local Registration operations activity chart. **Demo flow** in its top-right corner opens this connected case at C1; selecting the rail logo returns to the chart landing page.
 
 Prompt: “What does your team need to learn?”
 
@@ -121,6 +123,26 @@ Assistant: “10 managers are confirmed for 18 September; Priya is confirmed for
 
 Actions: **View my team learning** / **Request a change** / **Contact Learning Operations**
 
+### C8 — My requests workspace (implemented)
+
+The My requests destination shows two locally derived, connected-case items: the parent team request `NMF-042` and Thomas’s linked later-session follow-up. It is a status and decision workspace, not a second operational console.
+
+- A progress infographic shows 11 of 12 learners with confirmed paths (92%), using the canonical request → plan → follow-up journey.
+- Three compact measures show confirmed learners, the main-session date and the one business follow-up.
+- Selecting the linked Thomas item explains the 9 October option and its after-deadline impact without implying that a registration was made.
+- **Ask Assistant to prepare a request**, **Review options with Assistant**, and **Compare options with Assistant** open a contextual conversation. They prepare explanation or a new request; they do not commit an operational decision.
+- Evidence is disclosed as retained confirmations, invitation records, availability checks and the still-pending Claire decision.
+
+### C9 — Team learning (implemented)
+
+Team learning is a supporting visual summary of the same fictional case, not a reporting-system replacement. It uses a deadline-readiness bar, request journey and compact cohort cards to show 12 requested, 11 confirmed routes (10 on 18 September and Priya on 22 September), and Thomas's one open follow-up.
+
+**Ask the assistant** and **Explore options** return to a contextual conversation about Thomas. The assistant can prepare or compare an option, but Claire remains the named owner of the later-session business choice.
+
+### C10 — Help (implemented)
+
+Help offers task-first prompts to request learning, check deadline risk, or resolve an attendee exception. It explains ownership across Claire, the Training Coordinator and Learning Operations, then makes the assistant's limits explicit: it cannot register attendees, send invitations, or make a business trade-off without the named owner's approval.
+
 ## Navigation and implementation
 
 Claire has a role-restricted version of the same navigation pattern:
@@ -140,3 +162,4 @@ Operations, Controls and Reports are omitted rather than presented as system des
 - Status terms distinguish requested, planned, awaiting business decision, sent for operational approval, confirmed and follow-up required.
 - No registration/invitation is shown complete before operational approval.
 - Keep 12 requested / 10 ready / 2 decisions / 11 confirmed / 1 follow-up consistent.
+- My requests makes the Thomas decision visible without changing the 11 confirmed registrations.
