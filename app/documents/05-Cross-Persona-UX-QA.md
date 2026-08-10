@@ -13,12 +13,14 @@ Use this checklist as the quality gate for every implemented persona state and b
 
 ## 2. Navigation
 
-For internal operational personas (Radu, Amélie, Elena), the desktop rail is exactly:
+Every persona uses Assistant plus two role-shaped destinations; Help opens from the profile menu:
 
-1. Assistant
-2. Operations
-3. Controls
-4. Reports
+| Persona | Rail |
+|---|---|
+| Claire | Assistant · My requests · Team learning |
+| Amélie | Assistant · Plans · Capacity |
+| Radu | Assistant · Operations · Session readiness |
+| Elena | Assistant · Controls · Control health |
 
 Requirements:
 
@@ -26,7 +28,7 @@ Requirements:
 - Rail expands/collapses without changing route order or labels.
 - On mobile it becomes a drawer; focused item remains visible after navigation.
 - Underlying systems are never primary navigation.
-- Claire uses a role-restricted version: Assistant, My requests, Team learning. Help opens from the persona profile menu rather than the left rail. Its rail styling and responsive behaviour remain identical.
+- Secondary destinations are infographic-first (facts, chips, charts) and route consequential work back to Assistant. Rail styling and responsive behaviour remain identical across personas.
 
 ## 3. Ownership map
 
@@ -49,11 +51,10 @@ Requirements:
 
 ## 5. Data integrity tests
 
-- Radu story: 12 requested; 10 initially ready; 2 decisions; 11 approved registrations; 1 pending exemption.
-- Amélie story: 180 requested learners; 8 sessions; 192 seats; 6 initially ready; 2 planning decisions; 0 open planning exceptions after resolution.
-- Claire story: 12 requested; 10 ready; 2 decisions; 11 confirmed; 1 open follow-up.
+- Radu / Amélie / Claire / Elena connected story: 12 requested; 10 initially ready; 2 decisions; 11 approved registrations; 1 pending follow-up; INV-04 with 1 participant impact (`scenario.ts`).
+- Amélie target vision (non-POC): 180 requested learners remains documentation-only and must not override the connected 12-person case in UI.
 - Never mark a registration, invitation, session publication or remediation complete before its named human approval.
-- Dates, locations, trainer names and learner names must remain internally consistent within each story. Do not force different persona demos to share people unless the implementation intentionally wires them together.
+- Dates, locations, trainer names and learner names must remain internally consistent with `scenario.ts`.
 
 ## 6. Experience and accessibility tests
 
@@ -64,8 +65,8 @@ Requirements:
 - Keyboard navigation exposes focus, reaches all actions and works in modal/dialog states.
 - Status never relies on colour alone.
 - Cards stack cleanly at tablet/mobile; evidence/details can collapse without hiding key decision context.
-- Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected. Claire’s My requests, Team learning and Help destinations do not use the right panel.
-- Non-chat destinations that share the app shell (New chat, My requests, Team learning, Help) use the compact `WorkspaceHeader` treatment—same height and title weight as the conversation header—not a large page hero title.
+- Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected. Persona secondary destinations and Help do not use the right panel.
+- Non-chat destinations that share the app shell (New chat, Help, and each persona’s two rail destinations) use the compact `WorkspaceHeader` treatment—same height and title weight as the conversation header—not a large page hero title.
 - New chat opens as a conversation-shaped first state: compact header with overflow menu only (no status pills), time-aware greeting, larger persona question, inline composer, governance boundary, then suggested starts. It must not use a sparse empty-state hero.
 - New-chat replies use the shared conversation-resource model: each persona receives fictional, role-relevant supporting material (brief, checklist, or evidence note), never a claim of a live document or system record.
 - On a landing or first guided state, the input is inline with the title and initial content. A bottom-fixed composer appears only once the conversation contains more than the initial state.
