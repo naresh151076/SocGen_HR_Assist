@@ -84,6 +84,7 @@ Start with [the implementation guide](app/documents/07-Implementation-Guide.md) 
 | `01-Radu-Learning-Administrator-Flagship-Flow.md` | Flagship Radu workflow specification |
 | `02-Amelie-Training-Coordinator-Flow.md` | Planning-workflow product specification |
 | `03-Claire-Business-Manager-Flow.md` | Business-manager product specification |
+| `08-Claire-Business-Manager-Persona-Brief.md` | Claire persona card, presenter notes and slide wording (downloadable) |
 | `04-Elena-Control-Lead-Flow.md` | Control-remediation product specification |
 | `05-Cross-Persona-UX-QA.md` | Cross-persona quality and governance checks |
 | `06-Connected-Persona-Storyline.md` | Canonical connected product storyline |

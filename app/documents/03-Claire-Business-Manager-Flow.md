@@ -4,6 +4,8 @@
 
 This is the target-flow specification for the business-manager experience. The current POC implements Claire's demand submission, business trade-off for Priya and Thomas, 11-person plan confirmation, detailed My requests, Team learning and Help support views, and role-restricted navigation. Detailed cohort editing, persistence, and notifications remain planned work. See `07-Implementation-Guide.md` for current coverage.
 
+For a downloadable persona card, presenter notes and slide wording, use `08-Claire-Business-Manager-Persona-Brief.md`.
+
 ## Story title
 
 **Request and secure mandatory training for a new-manager cohort**
