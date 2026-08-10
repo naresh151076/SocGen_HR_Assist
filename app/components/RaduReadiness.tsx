@@ -155,12 +155,20 @@ export function RaduReadiness({ onAskAssistant }: Props) {
                 </div>
                 <div className="mt-4 flex items-center gap-2 rounded-lg border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
                   <CircleAlert size={15} strokeWidth={1.8} className="shrink-0 text-[var(--sg-red)]" />
-                  <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">Priya · Thomas</p>
+                  <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">
+                    {view === "check" ? "Priya · Thomas" : "Thomas · later session"}
+                  </p>
                   <button
-                    onClick={() => onAskAssistant("Ask Claire to decide the two registration exceptions for New Manager Foundations.")}
+                    onClick={() =>
+                      onAskAssistant(
+                        view === "check"
+                          ? "Ask Claire to decide the two registration exceptions for New Manager Foundations."
+                          : "Summarise the Thomas Bernard follow-up hold for New Manager Foundations."
+                      )
+                    }
                     className="ml-auto shrink-0 text-sm font-bold text-[var(--sg-red)] hover:underline"
                   >
-                    Ask Claire
+                    {view === "check" ? "Ask Claire" : "Open hold"}
                   </button>
                 </div>
               </section>

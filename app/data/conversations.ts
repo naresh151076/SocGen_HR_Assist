@@ -177,7 +177,7 @@ const scenarios: Record<PersonaId, ConversationScenario> = {
       summary: "Control record showing the issue, evidence, remediation boundary and re-check.",
       facts: [
         { label: "Control", value: "INV-04 · invitation coverage" },
-        { label: "Impact", value: "1 participant affected" },
+        { label: "Impact", value: "1 participant · François Laurent" },
         { label: "Re-check", value: "After approved delivery" },
         { label: "Approval boundary", value: "Elena approves remediation or an accepted exception" },
       ],
@@ -188,8 +188,8 @@ const scenarios: Record<PersonaId, ConversationScenario> = {
         { label: "What Elena reviews", detail: "Impact, root cause, remediation scope, accountable action and the required re-check." },
       ],
       sections: [
-        { title: "Control record", items: [{ heading: "INV-04", detail: "Every confirmed registration must have a current calendar invitation", status: "Exception" }, { heading: "Detection", detail: "Weekly control after a replacement registration moved post-batch" }] },
-        { title: "Remediation scope", items: [{ heading: "One invitation", detail: "Send current invite · keep registration unchanged", status: "Pending" }, { heading: "Re-check", detail: "Rerun INV-04 after delivery confirmation" }] },
+        { title: "Control record", items: [{ heading: "INV-04", detail: "Every confirmed registration must have a current calendar invitation", status: "Exception" }, { heading: "Detection", detail: "Weekly control after a session change post-batch · François Laurent" }] },
+        { title: "Remediation scope", items: [{ heading: "One invitation", detail: "Send current invite for François Laurent · keep registration unchanged", status: "Pending" }, { heading: "Re-check", detail: "Rerun INV-04 after delivery confirmation" }] },
       ],
     }],
   },

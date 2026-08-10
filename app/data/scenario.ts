@@ -31,4 +31,5 @@ export const scenario = {
     {name:"Thomas Bernard",team:"Securities Services",status:"Needs decision",note:"Starts on 21 September; he cannot attend the proposed session.",alternative:"9 October 2026 — after the requested deadline"},
   ] as Person[],
   checks:["Mandarin catalogue and planning rules", "Room and Victor Laurent availability", "HR Data/SWS availability", "MyLearning learning history and capacity"],
+  controlParticipant:"François Laurent",
 };

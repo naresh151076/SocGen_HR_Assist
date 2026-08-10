@@ -51,7 +51,7 @@ Requirements:
 
 ## 5. Data integrity tests
 
-- Radu / Amélie / Claire / Elena connected story: 12 requested; 10 initially ready; 2 decisions; 11 approved registrations; 1 pending follow-up; INV-04 with 1 participant impact (`scenario.ts`).
+- Data integrity: Radu / Amélie / Claire / Elena connected story: 12 requested; 10 initially ready; 2 decisions; 11 approved registrations; 1 pending follow-up; INV-04 with 1 participant impact — François Laurent (`scenario.ts`).
 - Amélie target vision (non-POC): 180 requested learners remains documentation-only and must not override the connected 12-person case in UI.
 - Never mark a registration, invitation, session publication or remediation complete before its named human approval.
 - Dates, locations, trainer names and learner names must remain internally consistent with `scenario.ts`.

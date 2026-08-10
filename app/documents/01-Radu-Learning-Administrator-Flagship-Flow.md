@@ -39,7 +39,7 @@ Claire, a business manager, needs 12 new managers trained in **New Manager Found
 
 Radu: Prepare registrations for the 12 new managers in Paris for New Manager Foundations. Use the proposed 18 September session. Do not send invitations until I approve.
 
-Assistant: I found the proposed session: New Manager Foundations · 18 September · Paris La Défense · Victor Martin · 16 seats. I will check eligibility, existing learning bookings and availability for the 12 people. I will not register anyone or send invitations without your approval.
+Assistant: I found the proposed session: New Manager Foundations · 18 September · Paris La Défense · Victor Laurent · 16 seats. I will check eligibility, existing learning bookings and availability for the 12 people. I will not register anyone or send invitations without your approval.
 
 **Primary action:** Check the group
 
@@ -72,23 +72,23 @@ Assistant: I found the proposed session: New Manager Foundations · 18 September
 | Needs decision | 2 | A rule or calendar conflict needs Radu’s choice. |
 | Capacity after proposed registrations | 10 of 16 | The session has enough seats. |
 
-**Two exception cards** *(fictional demo data)*
+**Two exception cards** *(connected case — `scenario.ts`)*
 
-1. **Camille Moreau — Calendar conflict**
-   - Conflict: Client onboarding workshop, 09:00–12:00.
-   - Recommendation: Offer the 25 September Paris session.
-   - Actions: **Choose alternative** / **Keep on current session**
-2. **Nicolas Bernard — Prerequisite not confirmed**
-   - Rule R-04: Manager Essentials completion is not available in the current learning record.
-   - Recommendation: Ask Claire to confirm an approved exemption or nominate a replacement.
-   - Actions: **Request exemption** / **Choose replacement**
+1. **Priya Shah — Calendar conflict**
+   - Conflict: Mandatory course already booked at the same time on 18 September.
+   - Recommendation: Offer the comparable 22 September Paris session (still before Claire’s deadline).
+   - Actions: **Ask Claire to choose alternative** / **Keep on current session** / **Exclude**
+2. **Thomas Bernard — Start-date condition**
+   - Condition: Starts on 21 September; cannot attend the 18 September session.
+   - Recommendation: Hold as follow-up; earliest suitable option 9 October (after requested deadline).
+   - Actions: **Ask Claire for later-session decision** / **Exclude from this action**
 
 **Evidence panel**
 
-- Registration policy R-07 evaluated
+- Registration policy evaluated
 - Existing booking check completed in MyLearning
 - Calendar availability check completed
-- Prerequisite confirmation requires decision
+- Business trade-offs require Claire’s decision
 
 **Interaction:** Resolve 2 decisions opens R3; the “10 ready” people must not yet be registered.
 
@@ -98,30 +98,30 @@ Assistant: I found the proposed session: New Manager Foundations · 18 September
 
 **Route/state:** /assistant?task=reg-042&step=exceptions · Needs decision
 
-**Purpose:** Let Radu make two compact, reversible decisions while preserving the group context.
+**Purpose:** Let Radu surface the exceptions while Claire owns the business trade-offs; preserve the group draft.
 
-The main conversation says: “The 10 ready registrations are held as a draft. Resolve the two exceptions, then review the complete action.”
+The main conversation says: “The 10 ready registrations are held as a draft. Claire must decide the two business exceptions, then review the complete action.”
 
-**Decision A — Camille**
+**Decision A — Priya (Claire)**
 
-Camille Moreau has a confirmed calendar conflict.
+Priya Shah has a confirmed calendar conflict on 18 September.
 
-Recommended: Move Camille to New Manager Foundations on 25 September, Paris La Défense. Why: Same curriculum, 5 seats available, no calendar conflict.
+Recommended: Move Priya to New Manager Foundations on 22 September, Paris La Défense. Why: Same curriculum, seats available, still before the 30 September deadline.
 
-Actions: **Use 25 September** / **Keep 18 September** / **Exclude from this action**
+Actions: **Choose 22 September** / **Keep 18 September** / **Remove Priya**
 
-**Decision B — Nicolas**
+**Decision B — Thomas (Claire)**
 
-Nicolas Bernard needs an approved prerequisite exemption.
+Thomas Bernard starts on 21 September and cannot be registered for 18 September.
 
-Actions: **Send exemption request to Claire** / **Replace Nicolas** / **Exclude from this action**
+Actions: **Choose 9 October** / **Ask Learning Operations for another option** / **Remove Thomas**
 
 **Chosen demo path**
 
-- Radu chooses **Use 25 September** for Camille.
-- Radu chooses **Send exemption request to Claire** for Nicolas.
+- Claire chooses **22 September** for Priya.
+- Claire keeps **Thomas** as a later-session follow-up (9 October earliest).
 
-Assistant: “The action now includes 11 proposed registrations: 10 for 18 September and 1 alternative registration for 25 September. Nicolas remains pending Claire’s decision.”
+Assistant: “The action now includes 11 proposed registrations: 10 for 18 September and Priya for 22 September. Thomas remains an open follow-up for Claire.”
 
 **Primary action:** Review before approval
 
@@ -142,11 +142,11 @@ Ready for your approval
 11 registrations will be created:
 
 - 10 people — 18 September, Paris La Défense
-- Camille Moreau — 25 September, Paris La Défense
+- Priya Shah — 22 September, Paris La Défense
 
-1 request will be sent:
+1 follow-up remains open:
 
-- Claire: approve or decline Nicolas Bernard’s prerequisite exemption
+- Thomas Bernard — later-session choice with Claire (earliest 9 October)
 
 11 Outlook invitations will be prepared and sent after registrations are confirmed.
 
@@ -156,7 +156,6 @@ Ready for your approval
 
 - MyLearning — create 11 registrations
 - Outlook — send 11 calendar invitations
-- Neocase — create 1 approval request
 - Control record — save rule outcomes and Radu’s decision
 
 **Non-negotiable interaction:** Approve and publish requires an explicit confirm modal: “Publish 11 registrations and send 11 invitations?” The confirm action changes the state to In progress, then Complete. A cancel leaves the draft intact.
@@ -169,40 +168,36 @@ Ready for your approval
 
 **Purpose:** Close routine work without making Radu audit multiple systems.
 
-Assistant: “Published successfully. 11 registrations confirmed in MyLearning; 11 Outlook invitations sent; Camille is registered for the 25 September session; Nicolas’s exemption request is waiting for Claire. I will bring Nicolas back to your queue when Claire responds.”
+Assistant: “Published successfully. 11 registrations confirmed in MyLearning; 11 Outlook invitations sent; Priya is registered for 22 September; Thomas remains a follow-up for Claire. Elena can review invitation coverage on INV-04.”
 
 **Completion card**
 
 | Item | Status | Evidence |
 |---|---|---|
 | 18 Sep group registration | Complete | ML-REG-2026-10482 |
-| 25 Sep alternative registration | Complete | ML-REG-2026-10483 |
+| 22 Sep alternative registration | Complete | ML-REG-2026-10483 |
 | Invitations | Complete | OUT-INV-2026-3021 |
-| Nicolas exemption | Waiting on Claire | NC-REQ-2026-887 |
+| Thomas follow-up | Waiting on Claire | NMF-042 |
 
-**Next actions:** Open Operations queue / View evidence / Start another task.
+**Next actions:** Open Operations / Session readiness / View evidence / Hand to Elena for INV-04.
 
 ---
 
-### Screen R6 — Operations: a cancellation is handled by exception
+### Screen R6 — Target vision: cancellation handled by exception (not connected POC)
 
-**Route/state:** /operations · task reg-042 selected
+**Route/state:** /operations · optional later scenario
 
-**Trigger:** Two days later, Camille cancels her 25 September place.
+**Trigger (vision):** A confirmed attendee cancels after publish. The product finds an eligible waitlisted replacement for Radu’s approval.
 
-**Queue row:** Needs decision · Camille Moreau cancelled · New Manager Foundations · 25 Sep · 1 seat open.
-
-**Assistant side panel:** “Camille cancelled her 25 September registration. The calendar invite has been withdrawn. I found one eligible waitlisted employee, Léa Dubois. She has no booking conflict and meets the session rule.”
-
-**Actions:** Review Léa / Leave seat open.
-
-Review Léa opens a compact approval panel. Radu approves; only then does the UI show Registration confirmed and Invitation sent.
+This cancellation path is **not** part of the connected NMF-042 demo (Priya / Thomas / INV-04). Keep it out of live UI counts for the connected case.
 
 ## Acceptance checks for implementation
 
 - Same app shell and status vocabulary as every other persona flow.
-- Counts never drift from 12 requested → 10 initially ready → 2 exceptions → 11 approved registrations → 1 approval pending.
+- Counts never drift from 12 requested → 10 initially ready → 2 exceptions → 11 approved registrations → 1 follow-up (Thomas).
 - Approval happens before completion claims.
 - Every exception has a named cause, rule/check explanation, recommendation, and an alternative action.
+- Business trade-offs (Priya / Thomas) are Claire’s; Radu does not invent business priority.
 - Every background-system reference is evidence/action metadata—not navigation.
+- Navigation is Assistant · Operations · Session readiness (Help in profile).
 - The flow is usable with keyboard focus and the review/approval card stacks vertically on narrow screens.

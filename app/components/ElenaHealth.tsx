@@ -100,7 +100,7 @@ export function ElenaHealth({ onAskAssistant }: Props) {
               </div>
               <div className="mt-4 flex items-center gap-2 rounded-lg border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
                 <CircleAlert size={15} strokeWidth={1.8} className="shrink-0 text-[var(--sg-red)]" />
-                <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">1 invite repair held</p>
+                <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">{scenario.controlParticipant} · invite repair</p>
                 <button
                   onClick={() => onAskAssistant("Approve the INV-04 remediation and send one replacement invitation.")}
                   className="ml-auto shrink-0 text-sm font-bold text-[var(--sg-red)] hover:underline"

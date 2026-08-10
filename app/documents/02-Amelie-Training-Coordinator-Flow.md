@@ -21,11 +21,33 @@ For a downloadable persona card, presenter notes and slide wording, use `09-Amel
 | Does not own | Individual registration, invitations or day-to-day participant changes. |
 | Product promise | Review one plan, resolve bounded conflicts, approve once. |
 
-## Scenario
+## Scenario (connected POC — source of truth)
+
+Claire’s demand reaches Amélie as the connected case in `scenario.ts` / `06-Connected-Persona-Storyline.md`:
+
+> “12 new managers in Paris need New Manager Foundations before 30 September. Prefer classroom delivery and Victor Laurent if available.”
+
+| Planning item | Value |
+|---|---|
+| Programme | New Manager Foundations |
+| Audience | 12 new managers, Paris |
+| Deadline | Before 30 September 2026 |
+| Format | Classroom |
+| Proposed session | Friday 18 September 2026 · 09:00–16:30 · Paris La Defense Learning Centre |
+| Capacity | 16 seats |
+| Trainer | Victor Laurent (preference) |
+| Alternative | Tuesday 22 September (for calendar conflicts such as Priya) |
+| POC outcome | One feasible session ready to publish; no trainer/room conflict on the connected case |
+
+**Product destinations implemented:** Plans (programme inbox with Claire · NMF cohort) and Capacity (seat meter, September strip, Claire → You → Radu). Help is in the profile menu.
+
+## Target vision scenario (not POC UI)
+
+The larger multi-session programme below remains design vision for later scale. It must not override the 12-person connected case in the prototype.
 
 Claire raises this demand: “We need to train 180 newly appointed managers in Paris before 30 November. Use the mandatory New Manager Foundations curriculum. We prefer classroom delivery.”
 
-**Mock-data baseline**
+**Mock-data baseline (vision)**
 
 | Planning item | Value |
 |---|---|
@@ -39,12 +61,14 @@ Claire raises this demand: “We need to train 180 newly appointed managers in P
 | Trainer pool | Victor Laurent, Sophie Bernard, Karim Haddad |
 | Initial result | 6 ready sessions; 2 decisions required |
 
-**Exceptions**
+**Exceptions (vision)**
 
 1. Victor is booked on another mandatory programme on 22 October.
 2. Atlas 4 only has 18 seats on 12 November; 24 are required.
 
 ## Screen flow
+
+> **Note:** Screens A1–A7 below describe the multi-session **target vision**. The connected POC conversation uses the 12-person scenario above (one session on 18 September, approve once, hand to Radu). Plans / Capacity destinations mirror that POC case.
 
 ### A1 — Assistant home: start planning
 
@@ -183,6 +207,7 @@ Handoff card: final programme schedule, rule results, trainer/room decisions, ap
 
 - Do not claim integrations or autonomous writes are real; state simulated/planned actions when appropriate.
 - Amélie approves publishing; participant registration begins only after this hand-off.
-- Keep 180 / 8 / 192 / 6 initially ready / 2 decisions consistent.
-- Keep Assistant active through A7. Planning board belongs in Operations as an optional manual view.
-- Use the common four-item navigation from the Context file; do not create planning-system navigation.
+- Connected POC counts stay on `scenario.ts`: 12 people · 16 seats · 18 September · Victor Laurent.
+- Keep 180 / 8 / 192 / 6 initially ready / 2 decisions only in **target vision** documentation—never in the live UI.
+- Keep Assistant active through planning approval. Plans / Capacity are role-shaped oversight boards that return consequential work to chat.
+- Navigation is Assistant · Plans · Capacity (Help in profile). Do not create Mandarin / MyLearning destinations.

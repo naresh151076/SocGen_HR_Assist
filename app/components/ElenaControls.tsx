@@ -35,7 +35,7 @@ const catalogue: ControlItem[] = [
   {
     id: "inv04",
     listTitle: "INV-04 invitation match",
-    subtitle: "1 participant · NMF cohort",
+    subtitle: `${scenario.controlParticipant} · NMF cohort`,
     due: "Today",
     group: "attention",
     title: "INV-04 · registration without current invitation",
@@ -43,17 +43,17 @@ const catalogue: ControlItem[] = [
     tone: "attention",
     ref: "INV-04",
     impact: "1",
-    impactNote: "participant",
+    impactNote: scenario.controlParticipant,
     match: "10 / 11",
     matchNote: "invites matched",
     state: "Exception",
     stateNote: "your decision",
     coverage: Math.round((10 / scenario.confirmed) * 100),
     evidence: [
-      { name: "Registration", detail: "Confirmed in MyLearning", tone: "ok" },
+      { name: scenario.controlParticipant, detail: "Confirmed registration · 18 September", tone: "ok" },
       { name: "Invitation", detail: "No current Outlook match", tone: "attention" },
-      { name: "Cause", detail: "Session change after batch", tone: "neutral" },
-      { name: "Repair", detail: "One replacement invitation", tone: "attention" },
+      { name: "Cause", detail: "Session change after invitation batch", tone: "neutral" },
+      { name: "Repair", detail: "One replacement invitation · keep registration", tone: "attention" },
     ],
     actions: [
       { label: "Approve remediation", prompt: "Approve the INV-04 remediation and send one replacement invitation.", primary: true },
@@ -146,15 +146,15 @@ const catalogue: ControlItem[] = [
     due: "Today",
     group: "recent",
     title: "Weekly invitation control pack",
-    status: "1 open",
-    tone: "attention",
+    status: "Pack",
+    tone: "neutral",
     ref: "WEEK-36",
     impact: "1",
-    impactNote: "needs you",
+    impactNote: "points to INV-04",
     match: "3 / 4",
     matchNote: "controls passed",
     state: "In progress",
-    stateNote: "INV-04 pending",
+    stateNote: "open INV-04",
     coverage: 75,
     evidence: [
       { name: "INV-04", detail: "1 exception open", tone: "attention" },
@@ -193,7 +193,7 @@ export function ElenaControls({ onAskAssistant }: Props) {
     <div className="flex h-full min-h-full w-full flex-col bg-white">
       <WorkspaceHeader
         title="Controls"
-        tags={["6 items", "2 need you"]}
+        tags={["INV-04 open", "1 needs you"]}
         menuLabel="Control options"
         menuItems={[
           {

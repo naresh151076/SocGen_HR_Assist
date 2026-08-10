@@ -19,7 +19,7 @@ Claire requests training. Amélie validates and publishes the feasible session. 
 | Exceptions | Priya Shah has a calendar conflict; Thomas Bernard starts on 21 September |
 | Approved result | 10 registrations for 18 September plus Priya for 22 September = 11 confirmed registrations |
 | Follow-up | Thomas waits for Claire’s later-session business decision; 9 October is the earliest suitable option |
-| Control | INV-04 finds one confirmed registration without a matching current Outlook invitation |
+| Control | INV-04 finds one confirmed registration (**François Laurent**) without a matching current Outlook invitation |
 
 ## The 13 connected states
 

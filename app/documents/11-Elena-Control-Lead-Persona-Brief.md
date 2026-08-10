@@ -62,12 +62,12 @@ After Radu confirms 11 registrations and invitations, Elena’s weekly invitatio
 |---|---|
 | Control | **INV-04** — invitation match |
 | Case link | NMF cohort · 18 September session |
-| Finding | Confirmed registration without a matching current Outlook invitation (connected POC: one participant impact) |
+| Finding | Confirmed registration without a matching current Outlook invitation (**François Laurent**) |
 | Elena’s job | Review evidence, approve contained remediation, require re-check |
 | After approval | Replacement invitation path + re-check pass + audit evidence complete |
 | Upstream | Radu executed registrations; Claire/Amélie already decided business/plan |
 
-*(Broader weekly volumes such as “126 sessions / 8 exceptions” in the flow spec are target vision; the connected POC centres INV-04.)*
+*(Broader weekly volumes such as “126 sessions / 8 exceptions” in the flow spec are target vision; the connected POC centres INV-04 · François Laurent.)*
 
 ---
 
