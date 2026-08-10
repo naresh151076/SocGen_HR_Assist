@@ -2,7 +2,7 @@
 
 ## Status of this document
 
-This is the detailed target-flow specification. The current POC implements Radu's connected registration stages: group checking, exception review, final approval, simulated publication, completion evidence, and hand-off to Elena's control workflow. It does not connect to systems of record or persist records. See `07-Implementation-Guide.md` for the delivered scope.
+This is the detailed target-flow specification. The current POC implements Radu's connected registration chat, plus Claire-style support destinations: **Operations** (master-detail package inbox with NMF check, publish draft, Thomas hold and supporting packages) and **Session readiness** (pipeline, donuts, cohort panel, Amélie → Claire → Elena handoff strip). Help opens from the profile menu with a numbered ops path. Chat CTAs reuse `conversations.ts` prompts. Canonical counts follow `scenario.ts` / `06-Connected-Persona-Storyline.md` (Priya/Thomas, not older Camille/Nicolas names). See `07-Implementation-Guide.md` for the delivered scope.
 
 ## Why this is the flagship flow
 

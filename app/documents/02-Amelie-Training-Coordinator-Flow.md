@@ -2,7 +2,7 @@
 
 ## Status of this document
 
-This is the target-flow specification for the planning persona. The current POC implements Amélie's feasible proposal, explicit plan-approval boundary, and hand-off of the approved session package to Radu. Multi-session schedule optimisation and real system publication remain planned work. See `07-Implementation-Guide.md` for current coverage.
+This is the target-flow specification for the planning persona. The current POC implements Amélie's connected planning chat for Claire’s **12-person** Paris NMF case (`scenario.ts`), plus Claire-style destinations: **Plans** (master-detail programme inbox with feasibility glyphs) and **Capacity** (seat meter, September strip, resource pass chips, Claire → You → Radu handoff). Help opens from the profile menu. The larger 180-person / 8-session programme below remains target vision, not the connected POC truth set. See `07-Implementation-Guide.md` for current coverage.
 
 ## Story title
 

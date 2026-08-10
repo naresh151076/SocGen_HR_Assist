@@ -10,7 +10,7 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | Conversation resources | Implemented for every persona: a fictional brief, checklist, or evidence note is generated with a new chat and opens the right panel only when its message-level link is selected |
 | New-chat landing | Implemented as a full-bleed first state with compact header, assistant opening, inline composer, governance boundary, and persona quick actions |
 | Connected example conversation | Implemented as local, persona-specific chats linked by explicit handoffs across Claire, Amélie, Radu, and Elena; every guided turn now explains the accountable work, fictional evidence context, review boundary, and linked detailed brief/checklist/evidence note |
-| Persona workflows | Implemented for demand, Claire’s master-detail My requests inbox and decision workspace, Team learning and Help support views, plan validation/approval, registration review/approval, and invitation-control remediation |
+| Persona workflows | Implemented for all four personas: connected chat plus Claire-style full-bleed destinations (requests/learning, plans/capacity, operations/readiness, controls/health) and persona-specific Help from the profile menu |
 | Evidence language | Implemented as rule summary, systems checked, control evidence, and audit-oriented UI |
 | Integrations and persistence | Not implemented |
 
@@ -19,20 +19,21 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | Location | Responsibility |
 |---|---|
 | `app/page.tsx` | App-shell state, persona switching, panel state, responsive navigation, and scroll containment |
-| `app/components/SideNav.tsx` | Persona navigation, projects/recent conversations, search, and account menu (Claire Help opens from the profile menu) |
-| `app/components/Workbench.tsx` | Time-aware landing greeting, registration-updates chart, continuous example conversation with in-chat work-package explainers, Claire's Team learning summary, Help guidance, and fixed composer |
+| `app/components/SideNav.tsx` | Persona navigation, projects/recent conversations, search, and account menu (Help opens from the profile menu for every persona) |
+| `app/components/Workbench.tsx` | Landing, guided demo, and routes every persona destination (including persona-specific Help) |
 | `app/components/NewChatLanding.tsx` | Conversation-aligned new-chat first state (header, time-aware greeting, larger persona question, inline composer, suggested starts) |
-| `app/components/PersonaFlow.tsx` | Compact supporting-persona flows |
 | `app/components/RightDetails.tsx` | Expandable live-context panel |
 | `app/components/ConversationThread.tsx` | Reusable persona-aware chat response and linked supporting resources |
 | `app/data/conversations.ts` | Fictional chat scenarios plus persona work-package, evidence-reference and approval-boundary content |
 | `app/components/PromptComposer.tsx` | Reusable governed-workflow composer |
-| `app/components/QuickActions.tsx` | Persona-specific action shortcuts with the shared icon and motion treatment |
+| `app/components/QuickActions.tsx` | Persona-specific action shortcuts (icon + short label) |
+| `app/components/SgCharts.tsx` | Shared donut, KPI, legend, pipeline and avatar helpers for oversight boards |
 | `app/globals.css` | Shared SG brand tokens and UI primitives (status, list rows, callouts, progress) used across destinations |
-| `app/components/ClaireRequests.tsx` | Claire’s full-width master-detail request inbox on a continuous white surface with brand-aligned selection, status and attention treatment |
-| `app/components/ClaireLearning.tsx` | Claire’s Team learning workspace: Markets & Risk charts, searchable team panel and NMF follow-up actions |
-| `app/components/ClaireHelp.tsx` | Claire’s Help guidance (opened from the persona profile menu): starting points, ownership boundary, useful questions and assistant limits |
-| `app/components/WorkspaceHeader.tsx` | Shared compact header for non-chat destinations (title, status tags, optional actions), aligned with the conversation header height and weight |
+| `app/components/ClaireRequests.tsx` / `ClaireLearning.tsx` / `ClaireHelp.tsx` | Claire business destinations |
+| `app/components/AmeliePlans.tsx` / `AmelieCapacity.tsx` / `AmelieHelp.tsx` | Amélie planning destinations |
+| `app/components/RaduOperations.tsx` / `RaduReadiness.tsx` / `RaduHelp.tsx` | Radu operations destinations |
+| `app/components/ElenaControls.tsx` / `ElenaHealth.tsx` / `ElenaHelp.tsx` | Elena control destinations |
+| `app/components/WorkspaceHeader.tsx` | Shared compact header for non-chat destinations |
 | `app/data/scenario.ts` | Fictional shared scenario data |
 | `app/data/personas.ts` | Persona metadata and role-based navigation |
 
@@ -40,7 +41,7 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 
 The root shell is constrained to the dynamic viewport height. The document body does not scroll. The centre workspace has the vertical overflow, while the left rail and right details panel remain in the shell. The details panel can scroll internally if its content exceeds the viewport.
 
-Conversation, New chat, My requests, Team learning and Help use a full-bleed centre (no outer max-width or page padding) so their compact headers align edge-to-edge. The time-aware Assistant home and other supporting destinations keep the padded content shell.
+Conversation, New chat, Help and all persona secondary destinations (requests, learning, plans, capacity, operations, readiness, controls, health) use a full-bleed centre so their compact headers align edge-to-edge. The time-aware Assistant home keeps the padded content shell.
 
 This is intentional: a long conversation must not move navigation, identity controls, or contextual evidence out of reach.
 
@@ -58,7 +59,7 @@ Browser verification of the shared shell uses three layout states: expanded navi
 
 ## Icon and motion system
 
-All UI icons use `lucide-react` with a consistent outlined weight. The persona-aware new-chat shortcuts use the shared `QuickActions` component: each compact card keeps its task-relevant icon on the left, title and short description in the centre, and chevron affordance on the right. A red border appears only on hover, with short entry and hover feedback. Navigation rails and disclosure chevrons use matching 200ms width or rotation transitions.
+All UI icons use `lucide-react` with a consistent outlined weight. The persona-aware new-chat shortcuts use the shared `QuickActions` component: each compact card keeps its task-relevant icon on the left, a short action label in the centre, and chevron affordance on the right—no descriptive subcopy. A red border appears only on hover, with short entry and hover feedback. Navigation rails and disclosure chevrons use matching 200ms width or rotation transitions.
 
 Motion is decorative only when it reinforces feedback or state change. `app/globals.css` includes a `prefers-reduced-motion` rule that effectively removes animations and transitions for users who request less motion. Future contributors must preserve this rule; repository-wide UI and documentation expectations are recorded in `AGENTS.md`.
 

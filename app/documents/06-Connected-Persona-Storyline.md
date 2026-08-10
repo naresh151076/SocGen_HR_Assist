@@ -32,8 +32,8 @@ Claire requests training. Amélie validates and publishes the feasible session. 
 7. Claire chooses Priya’s alternative and keeps Thomas open.
 8. Radu approves 11 registrations and 11 invitations.
 9. Radu sees completion and operational evidence.
-10. Claire sees a selectable master-detail My requests inbox with her business learning needs; the selected team request shows deadline coverage, the cohort outcome, a short ownership note, and Thomas’s follow-up decision.
-11. Elena opens the weekly INV-04 exception.
+10. Claire sees My requests / Team learning; Amélie sees Plans / Capacity; Radu sees Operations / Session readiness—each mirroring the connected case with handoffs and assignments as facts and chips, not prose.
+11. Elena opens Controls / Control health on the weekly INV-04 exception.
 12. Elena approves the one-invitation remediation.
 13. Elena sees the re-check pass and audit evidence complete.
 
@@ -41,13 +41,18 @@ Claire requests training. Amélie validates and publishes the feasible session. 
 
 The default Assistant landing page greets the signed-in persona by first name using the browser's local time (Good morning, Good afternoon, or Good evening). A compact Registration updates chart sits below the greeting. The **Demo flow** button in the top-right corner starts the connected case at state 1. Selecting the Société Générale logo in either rail state returns to this landing page and exits any demo or conversation state.
 
-Amélie, Radu and Elena use Assistant, Operations, Controls and Reports. Claire uses Assistant, My requests and Team learning in the left rail; Help is available from the persona profile menu so guidance stays secondary to chat. Projects and Recent conversations are shared rail organisers only. Mandarin, MyLearning, HR Data/SWS, Outlook and Neocase are evidence or planned-action references, never left-navigation destinations.
+Each persona has Assistant plus two role-shaped full-bleed destinations; Help stays in the profile menu. Projects and Recent conversations are shared rail organisers only. Mandarin, MyLearning, HR Data/SWS, Outlook and Neocase are evidence or planned-action references, never left-navigation destinations.
 
-Selecting **New chat** opens a conversation-shaped first state: the same compact header treatment as an active thread (title and overflow menu only—no status pills), a time-aware first-name greeting, a larger persona question as the landing title, an inline composer, a short governance boundary, and suggested starts. When the user sends a request, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
+| Persona | Rail destinations | What they show |
+|---|---|---|
+| Claire | My requests · Team learning | Business need inbox; Markets & Risk readiness charts |
+| Amélie | Plans · Capacity | Programme inbox with feasibility glyphs; seat meter and September strip |
+| Radu | Operations · Session readiness | Registration package inbox; cohort pipeline and exception callout |
+| Elena | Controls · Control health | Exception inbox; invitation match-rate and audit path |
 
-Claire's Team learning destination is a Markets & Risk unit overview: team mix, training status, who needs what, a searchable member panel with learning statuses, and the active NMF-042 follow-up. Its calls to action return to the conversational assistant. Help opens from the persona profile menu with task-led prompts and the approval boundary for business, planning and operational decisions.
+Selecting **New chat** opens a conversation-shaped first state: the same compact header treatment as an active thread (title and overflow menu only—no status pills), a time-aware first-name greeting, a larger persona question as the landing title, an inline composer, a short governance boundary, and suggested starts (icon + short label only). When the user sends a request, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
 
-Compared with Amélie, Radu and Elena, Claire is the business-facing consumer of the same connected case: she starts needs in chat, watches request progress in My requests, and uses Team learning for unit readiness—never for registration, invitations or controls.
+Support destinations stay infographic-first: KPIs, donuts, progress bars, status chips and coverage rows. Consequential actions route back into the conversational assistant with that persona’s existing chat scenario. Compact ownership strips show handoffs (Claire ↔ Amélie ↔ Radu ↔ Elena) without merging personas into one chat.
 
 ## Presentation rule
 

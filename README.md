@@ -27,9 +27,9 @@ The assistant can prepare, check, recommend, and simulate approved work. It must
 - A persistent rail-edge control that overlaps the navigation and workspace so collapse and expand remain available in both rail states.
 - Conversation-linked supporting documents: a fictional brief, checklist, or evidence note opens the expandable right panel only when a user selects that resource.
 - A **New chat** first state that matches conversation chrome: compact header, time-aware greeting, larger persona question, inline composer, governance note, and persona-specific quick-action cards with Lucide icons, chevron affordance, and reduced-motion-safe feedback.
-- Claire's **Team learning** view: Markets & Risk unit charts plus a searchable team panel with avatar rows and learning status.
-- Claire's **Help** view (persona profile menu): starting points, ownership boundary, useful questions and assistant limits in the same compact layout language.
-- Accessible labels, visible focus treatment, and responsive card layouts.
+- Role-shaped full-bleed destinations for every persona (Claire: My requests / Team learning; Amélie: Plans / Capacity; Radu: Operations / Session readiness; Elena: Controls / Control health), using KPIs, donuts, progress bars and coverage rows rather than prose.
+- Persona **Help** from the profile menu: numbered ownership path, starter asks and limits, without long descriptions.
+- Accessible labels, visible focus treatment, and responsive layouts.
 
 ### Connected persona case
 
@@ -46,7 +46,7 @@ Each role has persona-aware navigation, a conversational state, evidence, and an
 
 Every guided chat turn also includes an in-conversation work package: what that persona is doing, how the fictional request and evidence are brought together, the references considered, and the review required before the next hand-off. Linked persona briefs, planning checklists and control notes provide the detailed supporting view without pretending to open live systems.
 
-Claire’s **My requests** workspace is a full-width fictional inbox for a business manager: the compact header matches conversation (edge-to-edge, no outer page padding), the left column lists attention items and recent team-learning requests, and the right column shows the selected request’s coverage, decisions and next step. Extra examples stay in Claire’s lane—mandatory refresh, Markets deputies leadership, cyber awareness for direct reports, graduate onboarding and client-facing conduct. It routes comparison or new-request work back into the conversational assistant and does not open a right context panel or create live requests.
+Each persona’s secondary workspace follows the same pattern as Claire’s **My requests**: full-width master-detail or chart board, conversation-aligned header, brand status tokens only, and CTAs that reopen the Assistant with that persona’s existing conversation scenario. Amélie’s Plans board surfaces Claire’s NMF demand and feasibility checks; Radu’s Operations queue holds the registration check and publish draft; Elena’s Controls inbox centres INV-04 with match coverage. Oversight boards (Team learning, Capacity, Session readiness, Control health) show handoffs and open follow-ups as chips and callouts—not text manuals.
 
 ## Demo data and boundaries
 

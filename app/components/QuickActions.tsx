@@ -1,33 +1,32 @@
 import { ChevronRight, CalendarPlus, ClipboardCheck, FileSearch, Users } from "lucide-react";
 import { type PersonaId } from "../data/personas";
 
-const actions: Record<PersonaId, { label: string; description: string; icon: typeof CalendarPlus }[]> = {
+const actions: Record<PersonaId, { label: string; icon: typeof CalendarPlus }[]> = {
   radu: [
-    { label: "Prepare registrations", description: "Check a cohort before approval", icon: Users },
-    { label: "Handle a cancellation", description: "Find a replacement or leave a seat open", icon: CalendarPlus },
-    { label: "Review an exception", description: "See rule evidence and recommendations", icon: FileSearch },
+    { label: "Prepare registrations", icon: Users },
+    { label: "Handle a cancellation", icon: CalendarPlus },
+    { label: "Review an exception", icon: FileSearch },
   ],
   amelie: [
-    { label: "Plan a programme", description: "Build a viable classroom schedule", icon: CalendarPlus },
-    { label: "Review capacity", description: "Check rooms, trainers and seats", icon: ClipboardCheck },
-    { label: "Resolve a planning conflict", description: "Choose a compliant alternative", icon: FileSearch },
+    { label: "Plan a programme", icon: CalendarPlus },
+    { label: "Review capacity", icon: ClipboardCheck },
+    { label: "Resolve a planning conflict", icon: FileSearch },
   ],
   claire: [
-    { label: "Train a new cohort", description: "Request mandatory learning for your team", icon: Users },
-    { label: "Check team learning", description: "See open needs and confirmations", icon: ClipboardCheck },
-    { label: "Request a change", description: "Update a learning request", icon: CalendarPlus },
+    { label: "Train a new cohort", icon: Users },
+    { label: "Check team learning", icon: ClipboardCheck },
+    { label: "Request a change", icon: CalendarPlus },
   ],
   elena: [
-    { label: "Review control exceptions", description: "Focus on decision-required items", icon: FileSearch },
-    { label: "Check invitation coverage", description: "Find participant-impact issues", icon: ClipboardCheck },
-    { label: "Assign remediation", description: "Set owner, due date and proof", icon: Users },
+    { label: "Review control exceptions", icon: FileSearch },
+    { label: "Check invitation coverage", icon: ClipboardCheck },
+    { label: "Assign remediation", icon: Users },
   ],
 };
 
 export function QuickActions({
   persona,
   onSelect,
-  compact = false,
 }: {
   persona: PersonaId;
   onSelect: (label: string) => void;
@@ -35,7 +34,7 @@ export function QuickActions({
 }) {
   return (
     <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
-      {actions[persona].map(({ label, description, icon: Icon }, index) => (
+      {actions[persona].map(({ label, icon: Icon }, index) => (
         <button
           key={label}
           onClick={() => onSelect(label)}
@@ -47,7 +46,6 @@ export function QuickActions({
           </span>
           <span className="min-w-0 flex-1">
             <span className="block text-sm font-semibold leading-5 text-zinc-900">{label}</span>
-            {!compact && <span className="mt-0.5 block text-xs leading-5 text-zinc-500">{description}</span>}
           </span>
           <ChevronRight
             aria-hidden="true"

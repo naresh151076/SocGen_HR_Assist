@@ -1,7 +1,7 @@
-import { type LucideIcon, Bot, ClipboardCheck, ShieldCheck, BarChart3, FileText, GraduationCap } from "lucide-react";
+import { type LucideIcon, Bot, ClipboardCheck, ShieldCheck, FileText, GraduationCap, CalendarRange, Gauge, Activity } from "lucide-react";
 
 export type PersonaId = "radu" | "amelie" | "claire" | "elena";
-export type NavKey = "assistant" | "operations" | "controls" | "reports" | "requests" | "learning" | "help";
+export type NavKey = "assistant" | "operations" | "controls" | "reports" | "requests" | "learning" | "help" | "plans" | "capacity" | "readiness" | "health";
 export type Persona = { id: PersonaId; name: string; initials: string; role: string; location: string; greeting: string; prompt: string; flowTitle: string; primaryAction: string; starters: string[]; stats: { value: string; label: string }[] };
 export const personas: Persona[] = [
   { id:"radu", name:"Radu Petrescu", initials:"R", role:"Learning Administrator", location:"GSC Romania", greeting:"What learning operation needs your decision?", prompt:"Describe the registration or invitation work you need help with.", flowTitle:"Register the right people with a clear audit trail", primaryAction:"Check the group", starters:["Check a group for an approved session","Prepare registrations for approval","Investigate invitation status"], stats:[{value:"12",label:"requested"},{value:"10",label:"ready"},{value:"2",label:"need a decision"}] },
@@ -10,6 +10,31 @@ export const personas: Persona[] = [
   { id:"elena", name:"Elena Popescu", initials:"E", role:"Learning Operations Control Lead", location:"GSC Romania", greeting:"What control needs your attention?", prompt:"Describe the control exception or evidence you want to review.", flowTitle:"Turn a control check into accountable evidence", primaryAction:"Review remediation", starters:["Review a control exception","Approve a contained remediation","Check weekly invitation controls"], stats:[{value:"1",label:"control exception"},{value:"1",label:"approval needed"},{value:"1",label:"re-check required"}] },
 ];
 export const getPersona = (id: PersonaId) => personas.find(p=>p.id===id)!;
-export const navigationFor = (id: PersonaId): {key:NavKey;label:string;icon:LucideIcon}[] => id === "claire" ? [
-  {key:"assistant",label:"Assistant",icon:Bot},{key:"requests",label:"My requests",icon:FileText},{key:"learning",label:"Team learning",icon:GraduationCap}
-] : [{key:"assistant",label:"Assistant",icon:Bot},{key:"operations",label:"Operations",icon:ClipboardCheck},{key:"controls",label:"Controls",icon:ShieldCheck},{key:"reports",label:"Reports",icon:BarChart3}];
+export const navigationFor = (id: PersonaId): {key:NavKey;label:string;icon:LucideIcon}[] => {
+  if (id === "claire") {
+    return [
+      { key: "assistant", label: "Assistant", icon: Bot },
+      { key: "requests", label: "My requests", icon: FileText },
+      { key: "learning", label: "Team learning", icon: GraduationCap },
+    ];
+  }
+  if (id === "radu") {
+    return [
+      { key: "assistant", label: "Assistant", icon: Bot },
+      { key: "operations", label: "Operations", icon: ClipboardCheck },
+      { key: "readiness", label: "Session readiness", icon: Gauge },
+    ];
+  }
+  if (id === "amelie") {
+    return [
+      { key: "assistant", label: "Assistant", icon: Bot },
+      { key: "plans", label: "Plans", icon: CalendarRange },
+      { key: "capacity", label: "Capacity", icon: Activity },
+    ];
+  }
+  return [
+    { key: "assistant", label: "Assistant", icon: Bot },
+    { key: "controls", label: "Controls", icon: ShieldCheck },
+    { key: "health", label: "Control health", icon: Gauge },
+  ];
+};

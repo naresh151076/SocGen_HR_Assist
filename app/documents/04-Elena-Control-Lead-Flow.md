@@ -2,7 +2,7 @@
 
 ## Status of this document
 
-This is the target-flow specification for control remediation. The current POC implements Elena's INV-04 exception, explicit remediation approval, simulated invitation delivery, and re-check pass. The full queue, assignments, reports, and retained production evidence remain planned work. See `07-Implementation-Guide.md` for current coverage.
+This is the target-flow specification for control remediation. The current POC implements Elena's connected INV-04 chat, plus Claire-style destinations: **Controls** (master-detail exception inbox centred on INV-04 with match coverage and evidence rows) and **Control health** (match-rate donut, audit-path strip, Radu → You → re-check handoff). Help opens from the profile menu. Broader weekly-queue volumes below remain target vision; the connected POC uses one participant impact from `scenario.ts`. See `07-Implementation-Guide.md` for current coverage.
 
 ## Story title
 

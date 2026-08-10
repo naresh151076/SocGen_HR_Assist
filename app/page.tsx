@@ -22,7 +22,8 @@ export default function Page() {
   const hasConversation = section === "assistant" && (conversationMode === "chat" || conversationMode === "demo");
   const isNewChat = section === "assistant" && conversationMode === "new";
   // Full-bleed centre (no outer max-width / page padding) so destination headers align with conversation.
-  const fullBleedWorkspace = hasConversation || isNewChat || section === "requests" || section === "learning" || section === "help";
+  const fullBleedSections: NavKey[] = ["requests", "learning", "help", "operations", "readiness", "plans", "capacity", "controls", "health"];
+  const fullBleedWorkspace = hasConversation || isNewChat || fullBleedSections.includes(section);
 
   const openPrimaryEvidence = (id: PersonaId) => {
     const resource = getConversationScenario(id).resources[0] ?? null;
@@ -98,7 +99,7 @@ export default function Page() {
       onSection={(s) => {
         setSection(s);
         setConversationMode("home");
-        setStage(s === "operations" ? 9 : s === "controls" ? 11 : s === "requests" ? 10 : 1);
+        setStage(1);
         setSelectedResource(null);
         setDetailsOpen(false);
         setMobileOpen(false);
