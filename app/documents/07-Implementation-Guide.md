@@ -19,9 +19,9 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | Location | Responsibility |
 |---|---|
 | `app/page.tsx` | App-shell state, persona switching, panel state, responsive navigation, and scroll containment |
-| `app/components/SideNav.tsx` | Persona navigation, projects/recent conversations, search, and account menu |
+| `app/components/SideNav.tsx` | Persona navigation, projects/recent conversations, search, and account menu (Claire Help opens from the profile menu) |
 | `app/components/Workbench.tsx` | Time-aware landing greeting, registration-updates chart, continuous example conversation with in-chat work-package explainers, Claire's Team learning summary, Help guidance, and fixed composer |
-| `app/components/NewChatLanding.tsx` | Conversation-aligned new-chat first state (header, assistant intro, inline composer, suggested starts) |
+| `app/components/NewChatLanding.tsx` | Conversation-aligned new-chat first state (header, time-aware greeting, larger persona question, inline composer, suggested starts) |
 | `app/components/PersonaFlow.tsx` | Compact supporting-persona flows |
 | `app/components/RightDetails.tsx` | Expandable live-context panel |
 | `app/components/ConversationThread.tsx` | Reusable persona-aware chat response and linked supporting resources |

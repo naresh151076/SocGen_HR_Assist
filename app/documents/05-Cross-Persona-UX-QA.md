@@ -26,7 +26,7 @@ Requirements:
 - Rail expands/collapses without changing route order or labels.
 - On mobile it becomes a drawer; focused item remains visible after navigation.
 - Underlying systems are never primary navigation.
-- Claire uses a role-restricted version: Assistant, My requests, Team learning, Help. Its rail styling and responsive behaviour remain identical.
+- Claire uses a role-restricted version: Assistant, My requests, Team learning. Help opens from the persona profile menu rather than the left rail. Its rail styling and responsive behaviour remain identical.
 
 ## 3. Ownership map
 

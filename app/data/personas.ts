@@ -1,4 +1,4 @@
-import { type LucideIcon, Bot, ClipboardCheck, ShieldCheck, BarChart3, FileText, GraduationCap, CircleHelp } from "lucide-react";
+import { type LucideIcon, Bot, ClipboardCheck, ShieldCheck, BarChart3, FileText, GraduationCap } from "lucide-react";
 
 export type PersonaId = "radu" | "amelie" | "claire" | "elena";
 export type NavKey = "assistant" | "operations" | "controls" | "reports" | "requests" | "learning" | "help";
@@ -11,5 +11,5 @@ export const personas: Persona[] = [
 ];
 export const getPersona = (id: PersonaId) => personas.find(p=>p.id===id)!;
 export const navigationFor = (id: PersonaId): {key:NavKey;label:string;icon:LucideIcon}[] => id === "claire" ? [
-  {key:"assistant",label:"Assistant",icon:Bot},{key:"requests",label:"My requests",icon:FileText},{key:"learning",label:"Team learning",icon:GraduationCap},{key:"help",label:"Help",icon:CircleHelp}
+  {key:"assistant",label:"Assistant",icon:Bot},{key:"requests",label:"My requests",icon:FileText},{key:"learning",label:"Team learning",icon:GraduationCap}
 ] : [{key:"assistant",label:"Assistant",icon:Bot},{key:"operations",label:"Operations",icon:ClipboardCheck},{key:"controls",label:"Controls",icon:ShieldCheck},{key:"reports",label:"Reports",icon:BarChart3}];

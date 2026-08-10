@@ -144,7 +144,7 @@ Team learning is a supporting visual summary of the same fictional case, not a r
 
 ### C10 — Help (implemented)
 
-Help offers task-first prompts to request learning, check deadline risk, or resolve an attendee exception. It explains ownership across Claire, the Training Coordinator and Learning Operations, then makes the assistant's limits explicit: it cannot register attendees, send invitations, or make a business trade-off without the named owner's approval.
+Help remains a guidance destination for Claire as Business Manager, but it is not a primary left-rail destination. It opens from the persona profile menu so day-to-day work stays in chat, My requests and Team learning. It offers starting points to request learning, check progress or resolve an exception, restates ownership across Claire, Training Coordination and Learning Operations, lists useful questions, and makes the assistant’s limits explicit.
 
 ## Navigation and implementation
 
@@ -153,9 +153,8 @@ Claire has a role-restricted version of the same navigation pattern:
 - Assistant
 - My requests
 - Team learning
-- Help
 
-Operations, Controls and Reports are omitted rather than presented as system destinations. The visual rail, collapse behaviour and mobile drawer remain shared.
+Help is available from the persona profile menu rather than the left rail. Operations, Controls and Reports are omitted rather than presented as system destinations. The visual rail, collapse behaviour and mobile drawer remain shared.
 
 ## Acceptance checks
 
