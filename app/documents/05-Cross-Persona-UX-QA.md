@@ -64,10 +64,13 @@ Requirements:
 - Keyboard navigation exposes focus, reaches all actions and works in modal/dialog states.
 - Status never relies on colour alone.
 - Cards stack cleanly at tablet/mobile; evidence/details can collapse without hiding key decision context.
-- Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected.
+- Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected. Claire’s My requests, Team learning and Help destinations do not use the right panel.
+- Non-chat destinations that share the app shell (My requests, Team learning, Help) use the compact `WorkspaceHeader` treatment—same height and title weight as the conversation header—not a large page hero title.
 - New-chat replies use the shared conversation-resource model: each persona receives fictional, role-relevant supporting material (brief, checklist, or evidence note), never a claim of a live document or system record.
 - On a landing or first guided state, the input is inline with the title and initial content. A bottom-fixed composer appears only once the conversation contains more than the initial state.
 - For every persona, measure the fixed composer against the usable workspace—not the browser viewport—with expanded rail, collapsed rail, and an open supporting-details panel. Its centre must equal the centre of the remaining workspace in all three states.
+- The final message, decision panel, and handoff must remain fully visible above the fixed composer; retain at least 240px of bottom clearance.
+- Each persona owns a distinct conversation. A completed decision shows the handoff and switches to the next persona’s request context; do not combine all owners into one thread.
 - Every new-chat shortcut uses a task-relevant Lucide icon from the shared `QuickActions` component; icons must not mix libraries or visual styles.
 - Panel and disclosure motion is short, functional, and disabled for users with `prefers-reduced-motion`.
 - UI does not display raw prompts, model explanations, API payloads or a visible agent swarm.

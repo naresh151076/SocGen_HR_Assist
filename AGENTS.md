@@ -17,6 +17,8 @@
 - Place the initial composer inline with its landing or first-state title. Use the bottom-fixed composer only after the thread contains a user/assistant exchange or the guided flow has advanced past its first state.
 - A bottom-fixed composer is centred in the remaining workspace—not the browser viewport—using `--workspace-left` and `--workspace-right`. Preserve those variables whenever the app-shell rail or details-panel behaviour changes.
 - Present example flows as continuous chats, never numbered stages or workflow cards. Seed an example with a credible user request, then alternate user bubbles, assistant replies, focused questions, and only the decision inputs needed to continue. Keep all simulated outcomes explicitly fictional.
+- Keep persona threads independent. When an accountable action finishes, show a compact handoff statement in that owner’s decision panel, then switch the rail/persona and open a new request thread for the next owner. Do not render several personas as one uninterrupted chat.
+- Any screen with the fixed composer needs at least 240px of content-bottom clearance, so the last message or decision panel is never obscured.
 
 ## Documentation and verification
 

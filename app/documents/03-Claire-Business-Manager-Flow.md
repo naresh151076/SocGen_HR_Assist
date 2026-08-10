@@ -125,13 +125,14 @@ Actions: **View my team learning** / **Request a change** / **Contact Learning O
 
 ### C8 — My requests workspace (implemented)
 
-The My requests destination shows two locally derived, connected-case items: the parent team request `NMF-042` and Thomas’s linked later-session follow-up. It is a status and decision workspace, not a second operational console.
+The My requests destination is a full-width master-detail inbox for Claire’s business learning needs. It uses the same edge-to-edge compact header as conversation (no outer page padding) and stays inside the centre workspace—no right context panel. The left column lists recent requests; the right column shows the selected request’s business detail.
 
-- A progress infographic shows 11 of 12 learners with confirmed paths (92%), using the canonical request → plan → follow-up journey.
-- Three compact measures show confirmed learners, the main-session date and the one business follow-up.
+- **Needs your attention:** parent team request `NMF-042` and Thomas’s linked later-session follow-up.
+- **Recent requests:** Risk & Conduct refresh, Markets deputies leadership, cyber awareness for direct reports, graduate onboarding, and client-facing conduct—examples of cohort and mandatory needs a France business manager would raise.
+- Selected team detail leads with coverage before the deadline (11 of 12), the one business decision still with Claire, and a plain-language cohort breakdown.
 - Selecting the linked Thomas item explains the 9 October option and its after-deadline impact without implying that a registration was made.
-- **Ask Assistant to prepare a request**, **Review options with Assistant**, and **Compare options with Assistant** open a contextual conversation. They prepare explanation or a new request; they do not commit an operational decision.
-- Evidence is disclosed as retained confirmations, invitation records, availability checks and the still-pending Claire decision.
+- **Prepare a request** (header menu), **Review options with Assistant**, and **Compare options with Assistant** open a contextual conversation. They prepare explanation or a new request; they do not commit an operational decision.
+- Ownership stays one short note: Claire owns the learning need and trade-off; Training Coordination owns feasible planning; Learning Operations owns approved registrations and invitations. Claire does not see back-office controls or an ops hand-off console.
 
 ### C9 — Team learning (implemented)
 

@@ -32,7 +32,7 @@ Claire requests training. Amélie validates and publishes the feasible session. 
 7. Claire chooses Priya’s alternative and keeps Thomas open.
 8. Radu approves 11 registrations and 11 invitations.
 9. Radu sees completion and operational evidence.
-10. Claire sees a selectable My requests workspace with the team-request progress infographic, retained evidence, and Thomas’s follow-up decision.
+10. Claire sees a selectable master-detail My requests inbox with her business learning needs; the selected team request shows deadline coverage, the cohort outcome, a short ownership note, and Thomas’s follow-up decision.
 11. Elena opens the weekly INV-04 exception.
 12. Elena approves the one-invitation remediation.
 13. Elena sees the re-check pass and audit evidence complete.
@@ -50,6 +50,17 @@ Claire's Team learning destination is a local, supporting visual summary of the 
 ## Presentation rule
 
 Do not use an eyebrow, persona label, or explanatory subtitle to introduce a screen title: the signed-in persona is already visible in the left rail. Lead with one meaningful title. Preserve factual field captions and accessible labels where they aid comprehension. Persona-specific starter actions use title-only cards. The guided case may use one compact `Guided demo · NMF-042` pill, but no persona banner or descriptive header copy.
+
+## Conversation work-package rule
+
+Every guided persona message must make the operating model explainable in the conversation itself. Under the assistant outcome, show a compact **How this work is being prepared** panel with:
+
+- what the accountable persona is doing now;
+- how the fictional request and evidence context have been assembled;
+- the checks, records, or planned-action references considered; and
+- what that persona must review or approve before the next action.
+
+This panel is part of the chat, not a second workflow screen or a source-system launcher. Mandarin, MyLearning, HR Data/SWS, Outlook and Neocase remain fictional evidence references only. The linked brief, checklist or control note supplies the more durable case facts, evidence retained and approval boundary. This makes hand-offs understandable while keeping the prototype honest about having no live integration.
 
 ## Governance rule
 

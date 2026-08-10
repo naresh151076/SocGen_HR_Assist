@@ -44,7 +44,9 @@ The flagship interactive demo follows a fictional **New Manager Foundations** re
 
 Each role has persona-aware navigation, a conversational state, evidence, and an explicit ownership boundary. The scenario is intentionally governed: no completion state is shown until the relevant human approval.
 
-Claire’s **My requests** workspace is a connected-case status view: it visualises the 11 of 12 confirmed learning paths, exposes the remaining Thomas follow-up, and routes comparison or new-request work back into the conversational assistant. It does not create live requests or complete registrations.
+Every guided chat turn also includes an in-conversation work package: what that persona is doing, how the fictional request and evidence are brought together, the references considered, and the review required before the next hand-off. Linked persona briefs, planning checklists and control notes provide the detailed supporting view without pretending to open live systems.
+
+Claire’s **My requests** workspace is a full-width fictional inbox for a business manager: the compact header matches conversation (edge-to-edge, no outer page padding), the left column lists attention items and recent team-learning requests, and the right column shows the selected request’s coverage, decisions and next step. Extra examples stay in Claire’s lane—mandatory refresh, Markets deputies leadership, cyber awareness for direct reports, graduate onboarding and client-facing conduct. It routes comparison or new-request work back into the conversational assistant and does not open a right context panel or create live requests.
 
 ## Demo data and boundaries
 
