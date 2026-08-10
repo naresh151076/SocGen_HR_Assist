@@ -43,13 +43,13 @@ The default Assistant landing page greets the signed-in persona by first name us
 
 Amélie, Radu and Elena use Assistant, Operations, Controls and Reports. Claire uses Assistant, My requests, Team learning and Help. Projects and Recent conversations are shared rail organisers only. Mandarin, MyLearning, HR Data/SWS, Outlook and Neocase are evidence or planned-action references, never left-navigation destinations.
 
-When a new conversation begins, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
+Selecting **New chat** opens a conversation-shaped first state: the same compact header treatment as an active thread, an assistant opening that asks the persona’s learning question, an inline composer, a short governance boundary, and suggested starts. When the user sends a request, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
 
 Claire's Team learning destination is a local, supporting visual summary of the same case: 12 requested, 11 confirmed routes, and Thomas's one open business follow-up. Its calls to action return to a conversational assistant, not a live learner-record system. Help gives task-led prompts and repeats the approval boundary for business, planning and operational decisions.
 
 ## Presentation rule
 
-Do not use an eyebrow, persona label, or explanatory subtitle to introduce a screen title: the signed-in persona is already visible in the left rail. Lead with one meaningful title. Preserve factual field captions and accessible labels where they aid comprehension. Persona-specific starter actions use title-only cards. The guided case may use one compact `Guided demo · NMF-042` pill, but no persona banner or descriptive header copy.
+Do not use an eyebrow, persona label, or explanatory subtitle to introduce a screen title: the signed-in persona is already visible in the left rail. Lead with one meaningful title. Preserve factual field captions and accessible labels where they aid comprehension. Persona-specific starter actions keep a short title with an optional one-line description under Suggested starts. The guided case may use one compact `Guided demo · NMF-042` pill, but no persona banner or descriptive header copy.
 
 ## Conversation work-package rule
 

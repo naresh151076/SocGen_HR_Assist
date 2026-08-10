@@ -4,9 +4,9 @@ import { ArrowRight, BookOpenCheck, Bot, CalendarCheck, CalendarDays, Check, Che
 import { scenario } from "../data/scenario";
 import { PromptComposer } from "./PromptComposer";
 import { type NavKey, type Persona } from "../data/personas";
-import { QuickActions } from "./QuickActions";
 import { ClaireRequests } from "./ClaireRequests";
 import { AlertCard, AssistantAvatar, ConversationHeader, ConversationThread, UserMessage, VerificationCard } from "./ConversationThread";
+import { NewChatLanding } from "./NewChatLanding";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { getConversationScenario, type ConversationResource } from "../data/conversations";
 import { ActivityChart } from "./ActivityChart";
@@ -89,7 +89,7 @@ export function Workbench({stage,setStage,section,persona,switchPersona,mode,con
   const advanceDemo=()=>setStage(Math.min(stage+1,guidedTurns.length) as Stage);
   function shell(content:React.ReactNode,showComposer=false,fullWidth=false){const conversationShell=mode==="chat"||mode==="demo"||fullWidth;return <div className={`${conversationShell?"w-full":"mx-auto max-w-5xl"} pb-[160px]`}>{content}{showComposer ? (<div className="conversation-composer fixed bottom-4 z-30 lg:bottom-5"><PromptComposer onSend={(prompt)=>{if(mode==="demo"){setDemoReplies(replies=>[...replies,{afterStage:stage,text:prompt}]);}else onStartChat(prompt)}} placeholder={mode==="demo"?"Reply to the assistant…":"Ask a follow-up about this request…"}/></div>) : null}</div>}
   if(section==="assistant"&&mode==="home") return <div className="mx-auto max-w-5xl pt-4 md:pt-8"><header className="flex flex-wrap items-start justify-between gap-4"><HomeGreeting name={persona.name}/><button onClick={onStartDemo} className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm font-bold text-zinc-700 transition hover:border-zinc-400 hover:bg-zinc-50"><Route size={16}/>Open example request</button></header><div className="mt-6"><ActivityChart/></div></div>;
-  if(section==="assistant"&&mode==="new") return <div className="mx-auto max-w-3xl pt-16 md:pt-24"><h1 className="text-center text-4xl font-bold tracking-tight md:text-5xl">{persona.greeting}</h1><div className="mt-8"><PromptComposer onSend={onStartChat} placeholder={persona.prompt}/></div><QuickActions persona={persona.id} onSelect={onStartChat} compact/></div>;
+  if(section==="assistant"&&mode==="new") return <NewChatLanding persona={persona} onStartChat={onStartChat} onStartDemo={onStartDemo}/>;
   if(section==="assistant"&&mode==="chat") return shell(<ConversationThread persona={persona} prompt={conversationPrompt} onOpenResource={onOpenResource}/>,true);
   if(mode==="demo") return shell(<GuidedConversation stage={stage} replies={demoReplies} onAdvance={advanceDemo} switchPersona={switchPersona} onOpenResource={onOpenResource}/>,true);
   if(section==="reports") return shell(<><Header title="Operational health" status="Supporting view"/><Panel><h2 className="text-2xl font-bold">Reports support the conversation; they do not replace it.</h2><p className="mt-2 text-sm text-zinc-600">Use the connected case in Assistant, Operations and Controls to make decisions. This prototype keeps reporting as a lightweight supporting destination.</p></Panel></>);

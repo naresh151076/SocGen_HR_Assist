@@ -26,7 +26,7 @@ The assistant can prepare, check, recommend, and simulate approved work. It must
 - A time-aware, persona-named landing greeting with a compact **Registration updates** chart; the rail and mobile logos return to it, and the connected demo starts from its top-right **Demo flow** button.
 - A persistent rail-edge control that overlaps the navigation and workspace so collapse and expand remain available in both rail states.
 - Conversation-linked supporting documents: a fictional brief, checklist, or evidence note opens the expandable right panel only when a user selects that resource.
-- Persona-specific quick-action cards beneath every new-chat composer, with a left-aligned Lucide icon, clear chevron affordance, red hover border, and reduced-motion-safe feedback.
+- A **New chat** first state that matches conversation chrome: compact header, assistant opening, inline composer, governance note, and persona-specific quick-action cards with Lucide icons, chevron affordance, and reduced-motion-safe feedback.
 - Claire's **Team learning** view: a contextual cohort infographic with deadline readiness, request journey, confirmed routes and a conversational Thomas follow-up.
 - Claire's **Help** view: task-led prompts, clear decision ownership, and explicit assistant guardrails.
 - Accessible labels, visible focus treatment, and responsive card layouts.

@@ -20,8 +20,9 @@ export default function Page() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const persona = getPersona(personaId);
   const hasConversation = section === "assistant" && (conversationMode === "chat" || conversationMode === "demo");
+  const isNewChat = section === "assistant" && conversationMode === "new";
   // Full-bleed centre (no outer max-width / page padding) so destination headers align with conversation.
-  const fullBleedWorkspace = hasConversation || section === "requests" || section === "learning" || section === "help";
+  const fullBleedWorkspace = hasConversation || isNewChat || section === "requests" || section === "learning" || section === "help";
 
   const openPrimaryEvidence = (id: PersonaId) => {
     const resource = getConversationScenario(id).resources[0] ?? null;
