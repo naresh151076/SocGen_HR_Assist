@@ -5,7 +5,7 @@ import { ImagePlus, Paperclip, Send, ShieldCheck } from "lucide-react";
 export function PromptComposer({ onSend, placeholder = "Describe the learning operation you want to complete…" }: { onSend: (prompt: string) => void; placeholder?: string }) {
   const [prompt, setPrompt] = useState("");
   const submit = () => { if (prompt.trim()) onSend(prompt.trim()); };
-  return <div className="rounded-2xl border border-zinc-300 bg-white p-3 shadow-[0_12px_35px_rgba(31,31,31,.06)]">
+  return <div className="prompt-composer rounded-2xl border border-zinc-300 bg-white p-3 shadow-[0_12px_35px_rgba(31,31,31,.06)]">
     <label className="sr-only" htmlFor="operation-prompt">Learning operation request</label>
     <textarea id="operation-prompt" rows={3} value={prompt} onChange={e=>setPrompt(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();submit();}}} placeholder={placeholder} className="w-full resize-none border-0 bg-transparent px-2 py-1 text-base leading-6 outline-none placeholder:text-zinc-400" />
     <div className="flex items-center justify-between gap-3 pt-2">
