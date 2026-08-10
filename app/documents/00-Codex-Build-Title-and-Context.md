@@ -32,7 +32,7 @@ The shared rail is collapsible to icons and is available in the mobile drawer. I
 | Persona | Primary destinations | Default |
 |---|---|---|
 | Amélie, Radu, Elena | **Assistant**, **Operations**, **Controls**, **Reports** | Assistant (Controls on Elena control screens) |
-| Claire | **Assistant**, **My requests**, **Team learning** (Help from persona profile menu) | Assistant, then My requests for status |
+| Claire | **Assistant**, **My requests**, **Team learning** (Help from persona profile menu) | Assistant (New chat), then Team learning / My requests for unit status |
 
 Below the destinations, the rail can show **Projects** and **Recent** conversations. They are conversation organisers, not workflow destinations, and must never replace the persona navigation above.
 

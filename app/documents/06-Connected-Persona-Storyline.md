@@ -45,7 +45,9 @@ Amélie, Radu and Elena use Assistant, Operations, Controls and Reports. Claire 
 
 Selecting **New chat** opens a conversation-shaped first state: the same compact header treatment as an active thread (title and overflow menu only—no status pills), a time-aware first-name greeting, a larger persona question as the landing title, an inline composer, a short governance boundary, and suggested starts. When the user sends a request, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
 
-Claire's Team learning destination is a local, supporting visual summary of the same case: 12 requested, 11 confirmed routes, and Thomas's one open business follow-up. Its calls to action return to a conversational assistant, not a live learner-record system. Help gives task-led prompts and repeats the approval boundary for business, planning and operational decisions.
+Claire's Team learning destination is a Markets & Risk unit overview: team mix, training status, who needs what, a searchable member panel with learning statuses, and the active NMF-042 follow-up. Its calls to action return to the conversational assistant. Help opens from the persona profile menu with task-led prompts and the approval boundary for business, planning and operational decisions.
+
+Compared with Amélie, Radu and Elena, Claire is the business-facing consumer of the same connected case: she starts needs in chat, watches request progress in My requests, and uses Team learning for unit readiness—never for registration, invitations or controls.
 
 ## Presentation rule
 
