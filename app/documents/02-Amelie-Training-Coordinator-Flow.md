@@ -1,5 +1,9 @@
 # Amélie Martin — Training Coordinator (ACO/GES)
 
+## Status of this document
+
+This is the target-flow specification for the planning persona. The current POC implements Amélie's feasible proposal, explicit plan-approval boundary, and hand-off of the approved session package to Radu. Multi-session schedule optimisation and real system publication remain planned work. See `07-Implementation-Guide.md` for current coverage.
+
 ## Story title
 
 **Plan a viable training programme before any session is published**
@@ -180,4 +184,3 @@ Handoff card: final programme schedule, rule results, trainer/room decisions, ap
 - Keep 180 / 8 / 192 / 6 initially ready / 2 decisions consistent.
 - Keep Assistant active through A7. Planning board belongs in Operations as an optional manual view.
 - Use the common four-item navigation from the Context file; do not create planning-system navigation.
-

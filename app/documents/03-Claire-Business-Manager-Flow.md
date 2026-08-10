@@ -1,5 +1,9 @@
 # Claire Martin — Business Manager / Training Requestor
 
+## Status of this document
+
+This is the target-flow specification for the business-manager experience. The current POC implements Claire's demand submission, business trade-off for Priya and Thomas, 11-person plan confirmation, and role-restricted navigation. Detailed cohort editing, persistence, and notifications remain planned work. See `07-Implementation-Guide.md` for current coverage.
+
 ## Story title
 
 **Request and secure mandatory training for a new-manager cohort**
@@ -136,4 +140,3 @@ Operations, Controls and Reports are omitted rather than presented as system des
 - Status terms distinguish requested, planned, awaiting business decision, sent for operational approval, confirmed and follow-up required.
 - No registration/invitation is shown complete before operational approval.
 - Keep 12 requested / 10 ready / 2 decisions / 11 confirmed / 1 follow-up consistent.
-

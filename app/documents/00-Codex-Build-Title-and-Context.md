@@ -1,8 +1,12 @@
-# Build title: SG Learning Operations — Conversational Orchestration POC
+# SG Learning Operations — product and build context
 
-## Copy this first into Codex
+## Status of this document
 
-> Build a high-fidelity, responsive Next.js React front-end POC called **SG Learning Operations — Conversational Orchestration POC**. Use the accompanying persona flow Markdown files as the source of truth. Start with 01-Radu-Learning-Administrator-Flagship-Flow.md; implement the other personas as connected supporting routes/states. This is a clickable mock-data prototype, not a live integration. Keep the primary experience conversational, with human approval for consequential actions and dashboards used only for operational review and evidence.
+This is the product-design brief for the POC and its next iterations. It is not a claim that every state below is implemented. For current code coverage and architecture, read `07-Implementation-Guide.md`; for the intended connected product story, read `06-Connected-Persona-Storyline.md`.
+
+## Build brief
+
+Build a high-fidelity, responsive Next.js React front-end POC called **SG Learning Operations — Conversational Orchestration POC**. Keep the primary experience conversational, with human approval for consequential actions and dashboards used only for operational review and evidence. The POC uses mock data and does not integrate with live systems.
 
 ## Product premise
 
@@ -23,12 +27,14 @@ SG GSC Romania manages training planning and administration across a France-firs
 
 ### Visible application navigation
 
-Use this exact sparse navigation on desktop, collapsible to icons; expose the same destinations in a mobile drawer:
+The shared rail is collapsible to icons and is available in the mobile drawer. Its destinations vary by accountable persona:
 
-1. **Assistant** — the default, conversational intent-to-action experience.
-2. **Operations** — work queue, published-session status, exception handling.
-3. **Controls** — rule evidence, control results and remediation.
-4. **Reports** — operational health and trend summaries.
+| Persona | Primary destinations | Default |
+|---|---|---|
+| Amélie, Radu, Elena | **Assistant**, **Operations**, **Controls**, **Reports** | Assistant (Controls on Elena control screens) |
+| Claire | **Assistant**, **My requests**, **Team learning**, **Help** | Assistant, then My requests for status |
+
+Below the destinations, the rail can show **Projects** and **Recent** conversations. They are conversation organisers, not workflow destinations, and must never replace the persona navigation above.
 
 Do **not** make Mandarin, MyLearning, HR Data/SWS, Neocase, Outlook, Excel or SAP/Ariba primary destinations. They are background systems and should appear only in a non-interactive Systems checked / Planned actions / Evidence panel.
 
@@ -45,8 +51,8 @@ Do **not** make Mandarin, MyLearning, HR Data/SWS, Neocase, Outlook, Excel or SA
 - Société Générale-inspired, not copied: white workspace, near-black text, restrained SG red for key action/status, soft neutral borders.
 - Conversation is the centre of the screen. Use concise assistant turns, structured proposal cards, and one clear decision at a time.
 - Desktop-first and responsive to tablet/mobile. On mobile, surface a single primary action and collapse evidence/details.
-- Preserve these status terms across every screen: Draft, Ready for review, Needs decision, Approved, In progress, Complete, Blocked.
-- Preserve this count baseline for the Radu demo: **12 requested; 10 ready to register; 2 need a decision.**
+- Preserve these status terms across every screen: Draft, Ready for review, Needs decision, Approved, In progress, Complete, Follow-up required, Control exception and Control passed.
+- Preserve the canonical count baseline: **12 requested → 10 ready → 2 exceptions → 11 confirmed → 1 follow-up.**
 
 ## POC constraints
 
@@ -72,4 +78,3 @@ Do **not** make Mandarin, MyLearning, HR Data/SWS, Neocase, Outlook, Excel or SA
 2. Add Radu approval, execution and post-publish operational state.
 3. Add Amélie, Claire and Elena as supporting routes/states using the shared shell/components.
 4. Run the final consistency checklist in 05-Cross-Persona-UX-QA.md.
-

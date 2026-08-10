@@ -1,5 +1,9 @@
 # Radu Petrescu — Learning Administrator
 
+## Status of this document
+
+This is the detailed target-flow specification. The current POC implements Radu's connected registration stages: group checking, exception review, final approval, simulated publication, completion evidence, and hand-off to Elena's control workflow. It does not connect to systems of record or persist records. See `07-Implementation-Guide.md` for the delivered scope.
+
 ## Why this is the flagship flow
 
 Radu is the best first POC persona because he performs the fragmented, repeatable work: consolidating requests, applying registration rules, checking availability, registering people, sending invitations, handling cancellations, and creating operational proof. The product should make **Radu the decision-maker**, not make AI the hero.

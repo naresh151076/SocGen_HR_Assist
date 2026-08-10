@@ -1,20 +1,34 @@
-export type Person = { name: string; team: string; status: "Eligible" | "Conflict"; note: string; alternative?: string };
+export type Person = { name:string; team:string; status:"Ready"|"Needs decision"; note:string; alternative?:string };
+
+// Canonical connected-demo truth set. Keep every persona view on this case.
 export const scenario = {
-  course: "New Manager Foundations", code: "LDR-104", requestor: "Claire Martin", city: "Paris", trainer: "Victor Ionescu",
-  date: "Tuesday, 17 September 2026", time: "09:00–16:30 CEST", room: "Tour Granite · Aster 3", capacity: 16,
-  people: [
-    { name:"Alice Bernard", team:"Global Markets", status:"Eligible", note:"Curriculum and manager eligibility confirmed." },
-    { name:"Benoît Leroy", team:"Finance", status:"Eligible", note:"Prerequisite complete; space available." },
-    { name:"Chloé Dubois", team:"Compliance", status:"Eligible", note:"Mandatory learning assignment confirmed." },
-    { name:"Daniel Moreau", team:"IT", status:"Eligible", note:"Prerequisite complete; space available." },
-    { name:"Élodie Simon", team:"Risk", status:"Eligible", note:"Manager eligibility confirmed." },
-    { name:"François Laurent", team:"Operations", status:"Eligible", note:"Prerequisite complete; space available." },
-    { name:"Gabrielle Petit", team:"HR", status:"Eligible", note:"Manager eligibility confirmed." },
-    { name:"Hugo Blanc", team:"Legal", status:"Eligible", note:"Prerequisite complete; space available." },
-    { name:"Inès Robert", team:"Client Services", status:"Eligible", note:"Manager eligibility confirmed." },
-    { name:"Julien Thomas", team:"Audit", status:"Eligible", note:"Prerequisite complete; space available." },
-    { name:"Karim Bensaid", team:"Corporate Banking", status:"Conflict", note:"Client review already accepted for 10:00–11:30.", alternative:"Thursday, 19 September · 09:00–16:30" },
-    { name:"Laura Gauthier", team:"Securities Services", status:"Conflict", note:"Mandatory risk committee overlaps 13:00–15:00.", alternative:"Tuesday, 24 September · 09:00–16:30" }
+  id:"nmf-042",
+  course:"New Manager Foundations",
+  requestor:"Claire Martin",
+  city:"Paris",
+  location:"Paris La Defense Learning Centre",
+  trainer:"Victor Laurent",
+  mainDate:"Friday, 18 September 2026",
+  alternativeDate:"Tuesday, 22 September 2026",
+  time:"09:00–16:30",
+  capacity:16,
+  sessionRef:"NMF-2026-0918",
+  requested:12,
+  ready:10,
+  confirmed:11,
+  people:[
+    {name:"Alice Bernard",team:"Global Markets",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Benoît Leroy",team:"Finance",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Chloé Dubois",team:"Compliance",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Daniel Moreau",team:"IT",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Élodie Simon",team:"Risk",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"François Laurent",team:"Operations",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Gabrielle Petit",team:"HR",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Hugo Blanc",team:"Legal",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Inès Robert",team:"Client Services",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Julien Thomas",team:"Audit",status:"Ready",note:"Eligibility, prerequisite and availability confirmed."},
+    {name:"Priya Shah",team:"Corporate Banking",status:"Needs decision",note:"Calendar conflict on 18 September.",alternative:"22 September 2026"},
+    {name:"Thomas Bernard",team:"Securities Services",status:"Needs decision",note:"Starts on 21 September; he cannot attend the proposed session.",alternative:"9 October 2026 — after the requested deadline"},
   ] as Person[],
-  checks: ["Curriculum rule 4.2 — New manager population", "Rule 6.1 — Prerequisite completed", "Rule 8.3 — Maximum capacity", "Control C-117 — Trainer eligibility"],
+  checks:["Mandarin catalogue and planning rules", "Room and Victor Laurent availability", "HR Data/SWS availability", "MyLearning learning history and capacity"],
 };

@@ -1,5 +1,9 @@
 # Elena Popescu — Learning Operations Control Lead
 
+## Status of this document
+
+This is the target-flow specification for control remediation. The current POC implements Elena's INV-04 exception, explicit remediation approval, simulated invitation delivery, and re-check pass. The full queue, assignments, reports, and retained production evidence remain planned work. See `07-Implementation-Guide.md` for current coverage.
+
 ## Story title
 
 **Turn weekly control checking into accountable evidence and remediation**
@@ -149,4 +153,3 @@ Actions: View recurring root causes / Assign improvement action / Export weekly 
 - Passed requires relevant evidence—not an AI-generated explanation.
 - Systems belong in evidence/action summaries, never primary navigation.
 - Preserve global visual tokens and navigation. Use Controls active for E1–E7.
-

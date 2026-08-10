@@ -1,6 +1,6 @@
 # Cross-persona UX consistency and implementation QA
 
-Run this checklist after all four flows are implemented. It is the quality gate that prevents a polished but incoherent prototype.
+Use this checklist as the quality gate for every implemented persona state and before expanding the prototype. The current POC implements the shared shell and a 13-state connected case across all four personas; integration, persistence, and full operational queues remain acceptance criteria rather than completed-work claims. See `07-Implementation-Guide.md` for coverage.
 
 ## 1. Shared product language
 
@@ -84,4 +84,3 @@ The POC is done when a reviewer can:
 4. Approve a controlled action.
 5. See resulting proof and the next owner.
 6. Move across personas without seeing navigation, language or governance rules change unexpectedly.
-

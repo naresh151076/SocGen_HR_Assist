@@ -4,8 +4,8 @@
 
 :root { --sg-red:#e9041e; --ink:#202124; --muted:#6b7078; --line:#e5e7ea; --canvas:#f7f7f6; --type-xs:0.75rem; --type-sm:0.875rem; --type-base:1rem; --type-md:1.25rem; --type-lg:1.563rem; --type-xl:1.953rem; --type-2xl:2.441rem; }
 * { box-sizing:border-box; }
-html { background:var(--canvas); }
-body { margin:0; color:var(--ink); background:var(--canvas); font-family: Arial, Helvetica, sans-serif; font-size:var(--type-base); line-height:1.5; }
+html { height:100%; background:var(--canvas); }
+body { height:100%; margin:0; overflow:hidden; color:var(--ink); background:var(--canvas); font-family: Arial, Helvetica, sans-serif; font-size:var(--type-base); line-height:1.5; }
 button, input { font:inherit; }
 button { cursor:pointer; }
 :focus-visible { outline:3px solid #ff9aa6; outline-offset:3px; }
