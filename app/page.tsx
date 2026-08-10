@@ -20,6 +20,8 @@ export default function Page() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const persona = getPersona(personaId);
   const hasConversation = section === "assistant" && (conversationMode === "chat" || conversationMode === "demo");
+  // Full-bleed centre (no outer max-width / page padding) so destination headers align with conversation.
+  const fullBleedWorkspace = hasConversation || section === "requests" || section === "learning" || section === "help";
 
   const openPrimaryEvidence = (id: PersonaId) => {
     const resource = getConversationScenario(id).resources[0] ?? null;
@@ -105,7 +107,7 @@ export default function Page() {
 
   return (
     <main
-      style={{ "--workspace-left": collapsed ? "76px" : "300px", "--workspace-right": detailsOpen ? "400px" : "0px" } as CSSProperties}
+      style={{ "--workspace-left": collapsed ? "76px" : "264px", "--workspace-right": detailsOpen ? "400px" : "0px" } as CSSProperties}
       className="flex h-dvh min-h-0 overflow-hidden bg-[var(--canvas)]"
     >
       <div className="hidden h-full min-h-0 md:block">{renderNav()}</div>
@@ -122,8 +124,8 @@ export default function Page() {
           </div>
         </div>
       )}
-      <div className={`workspace-scroll min-h-0 min-w-0 flex-1 overflow-y-auto overscroll-contain pt-14 md:pt-0 ${hasConversation ? "bg-white" : ""}`}>
-        <div className={hasConversation ? "min-h-full w-full" : "mx-auto min-h-full max-w-[1600px] px-5 py-6 md:px-10 md:py-8 lg:px-14"}>
+      <div className={`workspace-scroll min-h-0 min-w-0 flex-1 overflow-y-auto overscroll-contain pt-14 md:pt-0 ${fullBleedWorkspace ? "bg-white" : ""}`}>
+        <div className={fullBleedWorkspace ? "min-h-full w-full" : "mx-auto min-h-full max-w-[1600px] px-5 py-6 md:px-10 md:py-8 lg:px-14"}>
           <Workbench
             stage={stage}
             setStage={setStage}
