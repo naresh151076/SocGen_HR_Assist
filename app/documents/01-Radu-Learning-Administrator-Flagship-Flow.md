@@ -4,6 +4,8 @@
 
 This is the detailed target-flow specification. The current POC implements Radu's connected registration chat, plus Claire-style support destinations: **Operations** (master-detail package inbox with NMF check, publish draft, Thomas hold and supporting packages) and **Session readiness** (pipeline, donuts, cohort panel, Amélie → Claire → Elena handoff strip). Help opens from the profile menu with a numbered ops path. Chat CTAs reuse `conversations.ts` prompts. Canonical counts follow `scenario.ts` / `06-Connected-Persona-Storyline.md` (Priya/Thomas, not older Camille/Nicolas names). See `07-Implementation-Guide.md` for the delivered scope.
 
+For a downloadable persona card, presenter notes and slide wording, use `10-Radu-Learning-Administrator-Persona-Brief.md`.
+
 ## Why this is the flagship flow
 
 Radu is the best first POC persona because he performs the fragmented, repeatable work: consolidating requests, applying registration rules, checking availability, registering people, sending invitations, handling cancellations, and creating operational proof. The product should make **Radu the decision-maker**, not make AI the hero.

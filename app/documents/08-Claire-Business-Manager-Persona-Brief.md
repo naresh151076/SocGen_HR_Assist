@@ -167,6 +167,9 @@ For Claire, conversational AI is not “chat instead of HR systems.” It is **a
 | File | Use |
 |---|---|
 | `03-Claire-Business-Manager-Flow.md` | Full C1–C10 product specification |
+| `09-Amelie-Training-Coordinator-Persona-Brief.md` | Planning persona brief |
+| `10-Radu-Learning-Administrator-Persona-Brief.md` | Operations persona brief |
+| `11-Elena-Control-Lead-Persona-Brief.md` | Control persona brief |
 | `06-Connected-Persona-Storyline.md` | Cross-persona connected case |
 | `00-Codex-Build-Title-and-Context.md` | Product premise and navigation model |
 | `07-Implementation-Guide.md` | What the POC implements today |
