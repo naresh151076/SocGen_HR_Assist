@@ -34,14 +34,14 @@ function ConversationHeader({
   }, [menuOpen]);
 
   return (
-    <header className="flex h-[var(--panel-header-height)] w-full shrink-0 items-center justify-between gap-4 border-b border-zinc-200 px-5 md:px-8">
+    <header className="flex h-[var(--panel-header-height)] w-full shrink-0 items-center justify-between gap-3 border-b border-zinc-200 px-5 md:px-8">
       <div className="min-w-0 flex-1">
-        <h1 className="truncate text-xl font-bold tracking-tight text-zinc-900 md:text-2xl">{title}</h1>
+        <h1 className="truncate text-base font-semibold text-zinc-900">{title}</h1>
       </div>
-      <div className="flex shrink-0 items-center gap-2">
+      <div className="flex shrink-0 items-center gap-1.5">
         <div className="hidden items-center gap-1.5 md:flex">
           {tags.map((tag) => (
-            <span key={tag} className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-semibold text-zinc-600">
+            <span key={tag} className="rounded-full border border-zinc-200 bg-zinc-50 px-2 py-0.5 text-[11px] font-medium text-zinc-600">
               {tag}
             </span>
           ))}
@@ -51,9 +51,9 @@ function ConversationHeader({
             aria-label="Conversation options"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((value) => !value)}
-            className="rounded-lg p-2 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-800"
+            className="rounded-lg p-1.5 text-zinc-500 hover:bg-zinc-100 hover:text-zinc-800"
           >
-            <Ellipsis size={18} />
+            <Ellipsis size={16} />
           </button>
           {menuOpen && (
             <div className="absolute right-0 top-10 z-40 w-52 overflow-hidden rounded-xl border border-zinc-200 bg-white py-1 shadow-[0_16px_40px_rgba(15,23,42,.12)]">

@@ -35,9 +35,9 @@ export function RightDetails({
     >
       <div className="scrollbar flex h-full w-[400px] flex-col overflow-y-auto">
         <div className="sticky top-0 z-10 flex h-[var(--panel-header-height)] shrink-0 items-center justify-between gap-3 border-b border-zinc-200 bg-[#f4f5f6] px-6">
-          <h2 className="text-xl font-bold tracking-tight text-zinc-900 md:text-2xl">Source Evidence</h2>
-          <button onClick={onClose} aria-label="Close details" className="rounded-lg p-2 text-zinc-500 hover:bg-white hover:text-zinc-800">
-            <X size={18} />
+          <h2 className="truncate text-base font-semibold text-zinc-900">Source Evidence</h2>
+          <button onClick={onClose} aria-label="Close details" className="rounded-lg p-1.5 text-zinc-500 hover:bg-white hover:text-zinc-800">
+            <X size={16} />
           </button>
         </div>
 
