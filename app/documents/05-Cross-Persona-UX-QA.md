@@ -66,6 +66,8 @@ Requirements:
 - Cards stack cleanly at tablet/mobile; evidence/details can collapse without hiding key decision context.
 - Do not open a context panel automatically or add a generic Details button to a conversation. Supporting material must be linked from the relevant message, and the panel opens only after that link is selected.
 - New-chat replies use the shared conversation-resource model: each persona receives fictional, role-relevant supporting material (brief, checklist, or evidence note), never a claim of a live document or system record.
+- On a landing or first guided state, the input is inline with the title and initial content. A bottom-fixed composer appears only once the conversation contains more than the initial state.
+- For every persona, measure the fixed composer against the usable workspace—not the browser viewport—with expanded rail, collapsed rail, and an open supporting-details panel. Its centre must equal the centre of the remaining workspace in all three states.
 - Every new-chat shortcut uses a task-relevant Lucide icon from the shared `QuickActions` component; icons must not mix libraries or visual styles.
 - Panel and disclosure motion is short, functional, and disabled for users with `prefers-reduced-motion`.
 - UI does not display raw prompts, model explanations, API payloads or a visible agent swarm.

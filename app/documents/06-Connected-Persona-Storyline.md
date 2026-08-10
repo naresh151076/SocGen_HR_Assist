@@ -2,7 +2,7 @@
 
 ## Canonical product-story reference
 
-This document is the source of truth for the intended connected product story. It supersedes differing dates, names, counts and outcomes in older persona-only flow documents. The current front-end is a partial, local-data implementation of this vision, not all 13 connected states. See `07-Implementation-Guide.md` for what is working today.
+This document is the source of truth for the intended connected product story. It supersedes differing dates, names, counts and outcomes in older persona-only flow documents. The current front-end presents the key sequence as a continuous, local-data conversation rather than as numbered screens. See `07-Implementation-Guide.md` for what is working today.
 
 **Demo:** Get 12 new managers into the right training, on time, with proof.
 

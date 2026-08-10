@@ -14,6 +14,9 @@
 - Respect `prefers-reduced-motion`; retain the shared reduction rule in `app/globals.css` whenever motion is added.
 - Preserve the fixed app shell: the centre workspace owns page-length scrolling; the left rail and right context panel stay viewport-bound.
 - Do not add global or automatic context-panel openers. In a chat, expose a resource link from the relevant assistant message; that message-level action alone opens the right panel. Use `ConversationThread` and `app/data/conversations.ts` for persona-specific fictional documents.
+- Place the initial composer inline with its landing or first-state title. Use the bottom-fixed composer only after the thread contains a user/assistant exchange or the guided flow has advanced past its first state.
+- A bottom-fixed composer is centred in the remaining workspace—not the browser viewport—using `--workspace-left` and `--workspace-right`. Preserve those variables whenever the app-shell rail or details-panel behaviour changes.
+- Present example flows as continuous chats, never numbered stages or workflow cards. Seed an example with a credible user request, then alternate user bubbles, assistant replies, focused questions, and only the decision inputs needed to continue. Keep all simulated outcomes explicitly fictional.
 
 ## Documentation and verification
 

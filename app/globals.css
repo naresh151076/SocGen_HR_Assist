@@ -21,4 +21,6 @@ textarea:focus-visible { outline:none; }
 .action-card-icon { transition:background-color .2s ease, color .2s ease, transform .2s ease; }
 .action-card:hover .action-card-icon { background:#fff0f1; color:var(--sg-red); transform:scale(1.06); }
 @keyframes action-card-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+.conversation-composer { max-width:42rem; }
+@media (min-width:1024px) { .conversation-composer { left:calc(var(--workspace-left) + ((100vw - var(--workspace-left) - var(--workspace-right) - 700px) / 2)); right:auto; width:700px; max-width:none; } }
 @media (prefers-reduced-motion:reduce) { *,::before,::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
