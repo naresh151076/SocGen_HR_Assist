@@ -30,6 +30,8 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | `app/components/QuickActions.tsx` | Persona-specific action shortcuts with the shared icon and motion treatment |
 | `app/globals.css` | Shared SG brand tokens and UI primitives (status, list rows, callouts, progress) used across destinations |
 | `app/components/ClaireRequests.tsx` | Claire’s full-width master-detail request inbox on a continuous white surface with brand-aligned selection, status and attention treatment |
+| `app/components/ClaireLearning.tsx` | Claire’s Team learning workspace: Markets & Risk charts, searchable team panel and NMF follow-up actions |
+| `app/components/ClaireHelp.tsx` | Claire’s Help guidance (opened from the persona profile menu): starting points, ownership boundary, useful questions and assistant limits |
 | `app/components/WorkspaceHeader.tsx` | Shared compact header for non-chat destinations (title, status tags, optional actions), aligned with the conversation header height and weight |
 | `app/data/scenario.ts` | Fictional shared scenario data |
 | `app/data/personas.ts` | Persona metadata and role-based navigation |

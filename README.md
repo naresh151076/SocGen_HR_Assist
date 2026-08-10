@@ -27,7 +27,7 @@ The assistant can prepare, check, recommend, and simulate approved work. It must
 - A persistent rail-edge control that overlaps the navigation and workspace so collapse and expand remain available in both rail states.
 - Conversation-linked supporting documents: a fictional brief, checklist, or evidence note opens the expandable right panel only when a user selects that resource.
 - A **New chat** first state that matches conversation chrome: compact header, time-aware greeting, larger persona question, inline composer, governance note, and persona-specific quick-action cards with Lucide icons, chevron affordance, and reduced-motion-safe feedback.
-- Claire's **Team learning** view: a clean team-status summary with deadline readiness, open follow-up, cohort coverage and request journey, aligned to the My requests brand treatment.
+- Claire's **Team learning** view: Markets & Risk unit charts plus a searchable team panel with avatar rows and learning status.
 - Claire's **Help** view (persona profile menu): starting points, ownership boundary, useful questions and assistant limits in the same compact layout language.
 - Accessible labels, visible focus treatment, and responsive card layouts.
 

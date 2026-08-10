@@ -13,11 +13,11 @@ This is the target-flow specification for the business-manager experience. The c
 | Field | Detail |
 |---|---|
 | Role | Business Manager, France |
-| Goal | Ensure new managers complete mandatory learning on time. |
-| Raises | A cohort need: people, topic, deadline, location and format preference. |
+| Goal | Keep Markets & Risk learning needs visible and on time; raise cohort requests and decide only the business trade-offs. |
+| Raises | A cohort need: people, topic, deadline, location and format preference — usually started in conversation. |
 | Decides | The business need, people priority and acceptable alternatives. |
 | Does not do | Create sessions, apply registration rules, reconcile records, send invitations or manage controls. |
-| Product promise | Say what the team needs; only return for a clear business decision. |
+| Product promise | Ask in plain language; oversee the unit’s learning status; return only for a clear business decision. |
 
 ## Scenario
 
@@ -138,9 +138,13 @@ The My requests destination is a full-width master-detail inbox for Claire’s b
 
 ### C9 — Team learning (implemented)
 
-Team learning is a supporting visual summary of the same fictional case, not a reporting-system replacement. It uses a deadline-readiness bar, request journey and compact cohort cards to show 12 requested, 11 confirmed routes (10 on 18 September and Priya on 22 September), and Thomas's one open follow-up.
+Team learning is Claire’s **Markets & Risk** unit overview for HR transformation via conversation — not an LMS or reporting console. It answers who is on the team, who is new vs established, who needs action, and who needs what.
 
-**Ask the assistant** and **Explore options** return to a contextual conversation about Thomas. The assistant can prepare or compare an option, but Claire remains the named owner of the later-session business choice.
+- Full-width chart workspace: team mix, training status, who-needs-what bars, and the active NMF-042 case.
+- Right-hand **Team members** panel: search, status filters, initials avatars, role, tenure and learning status.
+- Compact KPIs for My team / New / Established / Need action / Up to date.
+- Open follow-ups (for example Thomas Bernard) route back into the conversational assistant for the business choice.
+- No registration, invitation or control actions are available here; those stay with Learning Operations and Control personas.
 
 ### C10 — Help (implemented)
 
@@ -165,3 +169,20 @@ Help is available from the persona profile menu rather than the left rail. Opera
 - No registration/invitation is shown complete before operational approval.
 - Keep 12 requested / 10 ready / 2 decisions / 11 confirmed / 1 follow-up consistent.
 - My requests makes the Thomas decision visible without changing the 11 confirmed registrations.
+- Team learning stays a business-unit overview; consequential choices still open in Assistant or My requests.
+
+## Claire vs other personas (presentation)
+
+Claire is the **business consumer** of learning operations in an HR transformation story told through conversational AI.
+
+| | Claire (Business Manager) | Amélie (Training Coordination) | Radu (Learning Operations) | Elena (Controls) |
+|---|---|---|---|---|
+| Lands on | New chat / Assistant home | Assistant | Assistant | Assistant / Controls |
+| Speaks in | Plain business need | Feasible plan options | Registration & invitation execution | Control evidence & exceptions |
+| Oversees | Unit readiness (Team learning) and request status (My requests) | Session viability | Queues and mass outcomes | Auditability of outcomes |
+| Approves | Business trade-offs only | Plan feasibility | Operational publish / send | Control close / remediation |
+| Does not see | Ops queues, rule engines, control consoles | Business unit dashboards | Claire’s team overview | Demand intake as primary work |
+
+**Demo path for Claire:** Home → New chat (“What does your team need to learn?”) → raise or continue a cohort request → My requests for status and decisions → Team learning for Markets & Risk readiness → Ask assistant / Open follow-up returns to conversation. Help stays in the profile menu so guidance never competes with chat.
+
+**Transformation message:** Existing systems of record stay in the background. Claire does not learn Mandarin, MyLearning or Neocase. She asks in language, sees unit readiness at a glance, and returns only when a named business decision is required.
