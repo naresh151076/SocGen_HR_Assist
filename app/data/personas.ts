@@ -1,0 +1,15 @@
+import { type LucideIcon, Bot, ClipboardCheck, ShieldCheck, BarChart3, FileText, GraduationCap, CircleHelp } from "lucide-react";
+
+export type PersonaId = "radu" | "amelie" | "claire" | "elena";
+export type NavKey = "assistant" | "operations" | "controls" | "reports" | "requests" | "learning" | "help";
+export type Persona = { id: PersonaId; name: string; initials: string; role: string; location: string; greeting: string; prompt: string; flowTitle: string; primaryAction: string; stats: { value: string; label: string }[] };
+export const personas: Persona[] = [
+  { id:"radu", name:"Radu Petrescu", initials:"R", role:"Learning Administrator", location:"GSC Romania", greeting:"What learning operation needs your decision?", prompt:"Prepare registrations for the 12 new managers in Paris. Do not send invitations until I approve.", flowTitle:"Register the right people with a clear audit trail", primaryAction:"Check the group", stats:[{value:"12",label:"requested"},{value:"10",label:"ready to register"},{value:"2",label:"need a decision"}] },
+  { id:"amelie", name:"Amélie Martin", initials:"AM", role:"Training Coordinator, ACO/GES", location:"Paris", greeting:"What programme do you need to plan?", prompt:"Plan classroom sessions for 180 new managers in Paris between 15 September and 30 November.", flowTitle:"Plan viable sessions before publication", primaryAction:"Review planning brief", stats:[{value:"180",label:"learners requested"},{value:"8",label:"sessions / 192 seats"},{value:"2",label:"planning decisions"}] },
+  { id:"claire", name:"Claire Martin", initials:"C", role:"Business Manager", location:"Paris", greeting:"What does your team need to learn?", prompt:"I have 12 new managers who need New Manager Foundations before 30 September in Paris.", flowTitle:"Secure mandatory training for your team", primaryAction:"Review 12 people", stats:[{value:"12",label:"people in request"},{value:"10",label:"ready so far"},{value:"1",label:"open follow-up"}] },
+  { id:"elena", name:"Elena Popescu", initials:"E", role:"Learning Operations Control Lead", location:"GSC Romania", greeting:"Two control exceptions need your decision today.", prompt:"Show me controls with participant impact.", flowTitle:"Turn weekly checks into accountable evidence", primaryAction:"Review decision-required items", stats:[{value:"118",label:"checks passed"},{value:"8",label:"need attention"},{value:"2",label:"due today"}] },
+];
+export const getPersona = (id: PersonaId) => personas.find(p=>p.id===id)!;
+export const navigationFor = (id: PersonaId): {key:NavKey;label:string;icon:LucideIcon}[] => id === "claire" ? [
+  {key:"assistant",label:"Assistant",icon:Bot},{key:"requests",label:"My requests",icon:FileText},{key:"learning",label:"Team learning",icon:GraduationCap},{key:"help",label:"Help",icon:CircleHelp}
+] : [{key:"assistant",label:"Assistant",icon:Bot},{key:"operations",label:"Operations",icon:ClipboardCheck},{key:"controls",label:"Controls",icon:ShieldCheck},{key:"reports",label:"Reports",icon:BarChart3}];
