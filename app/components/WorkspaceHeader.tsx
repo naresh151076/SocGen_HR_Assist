@@ -48,7 +48,7 @@ export function WorkspaceHeader({ title, tags = [], menuItems, menuLabel = "Page
         {tags.length > 0 && (
           <div className="hidden items-center gap-1.5 md:flex">
             {tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-zinc-200 bg-zinc-50 px-2 py-0.5 text-[11px] font-medium text-zinc-600">
+              <span key={tag} className="rounded-full border border-[var(--line)] bg-[var(--surface-subtle)] px-2 py-0.5 text-[11px] font-medium text-[var(--muted)]">
                 {tag}
               </span>
             ))}

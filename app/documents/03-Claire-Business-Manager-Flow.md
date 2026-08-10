@@ -130,6 +130,8 @@ The My requests destination is a full-width master-detail inbox for Claire’s b
 - **Needs your attention:** parent team request `NMF-042` and Thomas’s linked later-session follow-up.
 - **Recent requests:** Risk & Conduct refresh, Markets deputies leadership, cyber awareness for direct reports, graduate onboarding, and client-facing conduct—examples of cohort and mandatory needs a France business manager would raise.
 - Selected team detail leads with coverage before the deadline (11 of 12), the one business decision still with Claire, and a plain-language cohort breakdown.
+- The list is a compact table-like view (request, status, due) with filters for All / Needs you / In progress / Confirmed. Rows use two lines only; selection is a flat soft-red fill without a side border.
+- Detail actions sit beside the title; key facts use a clean meta strip rather than stacked grey cards.
 - Selecting the linked Thomas item explains the 9 October option and its after-deadline impact without implying that a registration was made.
 - **Prepare a request** (header menu), **Review options with Assistant**, and **Compare options with Assistant** open a contextual conversation. They prepare explanation or a new request; they do not commit an operational decision.
 - Ownership stays one short note: Claire owns the learning need and trade-off; Training Coordination owns feasible planning; Learning Operations owns approved registrations and invitations. Claire does not see back-office controls or an ops hand-off console.

@@ -8,6 +8,9 @@
 
 ## UI system
 
+- Brand identity follows Société Générale: black and white surfaces, SG red (`--sg-red`) as the only accent. Do not introduce emerald, amber, sky, or purple status colours in product UI.
+- Prefer shared tokens and primitives in `app/globals.css` (`.sg-status-*`, `.sg-list-row`, `.sg-callout`, `.sg-progress`, `.sg-fact`, `.sg-row`) over one-off colour utilities.
+- Status language stays restrained: attention uses soft red; confirmed/neutral uses black text on light grey. Icons default to muted/ink; red only for attention.
 - Use `lucide-react` for all interface icons. Prefer a single 1.8–2px outlined style; do not mix icon libraries or introduce emoji as UI icons.
 - New-chat quick actions must have a meaningful Lucide icon and a short action label. Use the shared `QuickActions` component rather than recreating action tiles.
 - Motion is subtle and functional: 160–320ms ease-out transitions for panel widths, chevrons, hover feedback, and action-card entry. Never make motion block interaction.

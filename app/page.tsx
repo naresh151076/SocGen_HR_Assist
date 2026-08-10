@@ -126,7 +126,7 @@ export default function Page() {
         </div>
       )}
       <div className={`workspace-scroll min-h-0 min-w-0 flex-1 overflow-y-auto overscroll-contain pt-14 md:pt-0 ${fullBleedWorkspace ? "bg-white" : ""}`}>
-        <div className={fullBleedWorkspace ? "min-h-full w-full" : "mx-auto min-h-full max-w-[1600px] px-5 py-6 md:px-10 md:py-8 lg:px-14"}>
+        <div className={fullBleedWorkspace ? "h-full min-h-full w-full" : "mx-auto min-h-full max-w-[1600px] px-5 py-6 md:px-10 md:py-8 lg:px-14"}>
           <Workbench
             stage={stage}
             setStage={setStage}
