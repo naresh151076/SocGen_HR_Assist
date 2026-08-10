@@ -50,7 +50,7 @@ Claire’s **My requests** workspace is a connected-case status view: it visuali
 
 ## Navigation control
 
-The desktop navigation expand/collapse control sits on the outer rail edge between the brand header and New chat, keeping the action close to navigation without obscuring project or recent-conversation content. Project folders report their open state and close their overflow menu when toggled; project and conversation overflow menus dismiss when the user clicks elsewhere.
+The desktop navigation expand/collapse control sits on the outer rail edge between the brand header and New chat, keeping the action close to navigation without obscuring project or recent-conversation content. Each project has separate folder, new-conversation, overflow, and expand/collapse controls; project and conversation overflow menus dismiss when the user clicks elsewhere.
 
 - All people, requests, places, dates, outcomes, systems, and identifiers are fictional demonstration data.
 - `app/data/scenario.ts` holds the shared scenario data.
