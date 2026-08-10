@@ -8,8 +8,7 @@ export function ConversationThread({persona,prompt,onOpenResource}:{persona:Pers
   return <div className="mx-auto max-w-3xl pt-10">
     <div className="rounded-2xl bg-zinc-900 px-5 py-4 text-sm leading-6 text-white">{prompt}</div>
     <article className="mt-5 rounded-2xl border border-[var(--line)] bg-white p-5 shadow-[0_8px_28px_rgba(20,20,20,.035)]">
-      <p className="text-xs font-bold uppercase tracking-[.16em] text-[var(--sg-red)]">{scenario.eyebrow}</p>
-      <h1 className="mt-3 text-2xl font-bold">{scenario.title}</h1>
+      <h1 className="text-2xl font-bold">{scenario.title}</h1>
       <p className="mt-2 text-sm leading-6 text-zinc-600">{scenario.response}</p>
       <p className="mt-4 flex items-start gap-2 text-sm font-semibold text-zinc-700"><ShieldCheck size={17} className="mt-0.5 shrink-0 text-emerald-600"/>{scenario.nextStep}</p>
       <div className="mt-5 border-t border-zinc-100 pt-4">

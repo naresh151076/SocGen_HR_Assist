@@ -27,7 +27,7 @@ export function ClaireRequests({ onAskAssistant }: Props) {
 
   return <div className="mx-auto max-w-6xl pb-16">
     <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
-      <div><h1 className="text-3xl font-bold tracking-tight md:text-4xl">My requests</h1><p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-600">Track the learning outcomes you asked for, the decisions still owned by you and the evidence behind each status.</p></div>
+      <h1 className="text-3xl font-bold tracking-tight md:text-4xl">My requests</h1>
       <button onClick={() => onAskAssistant("I need to create a learning request for my team.")} className="inline-flex items-center gap-2 rounded-lg bg-[var(--sg-red)] px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-95"><Bot size={16}/> Ask Assistant to prepare a request</button>
     </header>
 
@@ -48,7 +48,7 @@ export function ClaireRequests({ onAskAssistant }: Props) {
       </section>
 
       <section className="rounded-2xl border border-[var(--line)] bg-white p-5 shadow-[0_8px_28px_rgba(20,20,20,.035)] md:p-6">
-        <div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-[.14em] text-zinc-500">{isTeam ? "Request NMF-042" : "Exception follow-up"}</p><h2 className="mt-2 text-2xl font-bold tracking-tight">{request.title}</h2><p className="mt-2 text-sm text-zinc-600">{request.description}</p></div><Status tone={request.tone}>{request.status}</Status></div>
+        <div className="flex flex-wrap items-start justify-between gap-3"><h2 className="text-2xl font-bold tracking-tight">{request.title}</h2><Status tone={request.tone}>{request.status}</Status></div>
         {isTeam ? <TeamDetail onAskAssistant={onAskAssistant}/> : <ThomasDetail onAskAssistant={onAskAssistant}/>} 
       </section>
     </div>
