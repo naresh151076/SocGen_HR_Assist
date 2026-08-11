@@ -85,10 +85,6 @@ Start with [the implementation guide](app/documents/07-Implementation-Guide.md) 
 | `02-Amelie-Training-Coordinator-Flow.md` | Planning-workflow product specification |
 | `03-Claire-Business-Manager-Flow.md` | Business-manager product specification |
 | `04-Elena-Control-Lead-Flow.md` | Control-remediation product specification |
-| `08-Claire-Business-Manager-Persona-Brief.md` | Claire persona card, presenter notes and slide wording |
-| `09-Amelie-Training-Coordinator-Persona-Brief.md` | Amélie persona card, presenter notes and slide wording |
-| `10-Radu-Learning-Administrator-Persona-Brief.md` | Radu persona card, presenter notes and slide wording |
-| `11-Elena-Control-Lead-Persona-Brief.md` | Elena persona card, presenter notes and slide wording |
 | `05-Cross-Persona-UX-QA.md` | Cross-persona quality and governance checks |
 | `06-Connected-Persona-Storyline.md` | Canonical connected product storyline |
 | `07-Implementation-Guide.md` | Current POC behaviour, code map, and gaps to the product vision |
