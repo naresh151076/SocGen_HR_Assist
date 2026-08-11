@@ -99,7 +99,7 @@ textarea:focus-visible { outline: none; }
 }
 .sg-status-neutral { background: var(--surface-subtle); color: var(--muted); }
 .sg-status-ok { background: var(--surface-subtle); color: var(--ink); }
-.sg-status-attention { background: var(--sg-red-soft); color: var(--sg-red); }
+.sg-status-attention { border: 1px solid var(--sg-red-border); background: white; color: var(--sg-red); }
 
 .sg-icon { color: var(--muted); }
 .sg-icon-attention { color: var(--sg-red); }

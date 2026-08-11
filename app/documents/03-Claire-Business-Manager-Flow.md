@@ -141,7 +141,7 @@ The My requests destination is a full-width master-detail inbox for Claire’s b
 Team learning is Claire’s **Markets & Risk** unit overview for HR transformation via conversation — not an LMS or reporting console. It answers who is on the team, who is new vs established, who needs action, and who needs what.
 
 - Full-width chart workspace: team mix, training status, who-needs-what bars, and the active NMF-042 case.
-- Right-hand **Team members** panel: search, status filters, initials avatars, role, tenure and learning status.
+- Right-hand **Team members** panel: search, status filters, neutral initials avatars, role, tenure and learning status. White member cards keep the roster quiet; red appears only for an actual exception or follow-up.
 - Compact KPIs for My team / New / Established / Need action / Up to date.
 - Open follow-ups (for example Thomas Bernard) route back into the conversational assistant for the business choice.
 - No registration, invitation or control actions are available here; those stay with Learning Operations and Control personas.

@@ -9,6 +9,7 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | Shared shell | Implemented: fixed navigation rail, centre scroll region, responsive mobile drawer, persona menu and projects/recents; logos return to a time-aware, persona-named landing greeting with a compact registration-updates chart, and an edge control remains available in both rail states |
 | Conversation resources | Implemented for every persona: a fictional brief, checklist, or evidence note is generated with a new chat and opens the right panel only when its message-level link is selected |
 | New-chat landing | Implemented as a full-bleed first state with compact header, assistant opening, inline composer, governance boundary, and persona quick actions |
+| Team member rosters | Implemented with quiet white cards, neutral light-grey avatars, and exception-only red status treatment to reduce visual fatigue while retaining search and status filters |
 | Connected example conversation | Implemented as local, persona-specific chats linked by explicit handoffs across Claire, Amélie, Radu, and Elena; every guided turn now explains the accountable work, fictional evidence context, review boundary, and linked detailed brief/checklist/evidence note |
 | Persona workflows | Implemented for all four personas: connected chat plus Claire-style full-bleed destinations (requests/learning, plans/capacity, operations/readiness, controls/health) and persona-specific Help from the profile menu |
 | Evidence language | Implemented as rule summary, systems checked, control evidence, and audit-oriented UI |
@@ -28,6 +29,10 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | `app/components/PromptComposer.tsx` | Reusable governed-workflow composer |
 | `app/components/QuickActions.tsx` | Persona-specific action shortcuts (icon + short label) |
 | `app/components/SgCharts.tsx` | Shared donut, KPI, legend, pipeline and avatar helpers for oversight boards |
+
+## Member roster treatment
+
+Person selection and search views use quiet white cards with neutral avatars. Red is not a person-identification colour; it is reserved for the small status cue of an actual exception or follow-up. This keeps dense rosters scannable without hiding decision-required states.
 | `app/globals.css` | Shared SG brand tokens and UI primitives (status, list rows, callouts, progress) used across destinations |
 | `app/components/ClaireRequests.tsx` / `ClaireLearning.tsx` / `ClaireHelp.tsx` | Claire business destinations |
 | `app/components/AmeliePlans.tsx` / `AmelieCapacity.tsx` / `AmelieHelp.tsx` | Amélie planning destinations |

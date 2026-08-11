@@ -99,11 +99,9 @@ export function Pipeline({
 }
 
 export const avatarPalette = [
-  "bg-[#202124] text-white",
-  "bg-[#3f4246] text-white",
-  "bg-[#fff0f1] text-[#e9041e]",
-  "bg-[#f0f0f0] text-[#202124]",
-  "bg-[#e8e8e8] text-[#202124]",
+  "border border-zinc-200 bg-white text-zinc-600",
+  "border border-zinc-200 bg-zinc-50 text-zinc-600",
+  "border border-zinc-200 bg-zinc-100 text-zinc-700",
 ];
 
 export function initials(name: string) {

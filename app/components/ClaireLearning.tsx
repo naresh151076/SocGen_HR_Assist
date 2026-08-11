@@ -66,11 +66,9 @@ const statusFilters: { key: "all" | MemberStatus; label: string }[] = [
 ];
 
 const avatarPalette = [
-  "bg-[#202124] text-white",
-  "bg-[#3f4246] text-white",
-  "bg-[#fff0f1] text-[#e9041e]",
-  "bg-[#f0f0f0] text-[#202124]",
-  "bg-[#e8e8e8] text-[#202124]",
+  "border border-zinc-200 bg-white text-zinc-600",
+  "border border-zinc-200 bg-zinc-50 text-zinc-600",
+  "border border-zinc-200 bg-zinc-100 text-zinc-700",
 ];
 
 function initials(name: string) {
@@ -303,8 +301,8 @@ export function ClaireLearning({ onAskAssistant }: Props) {
               <p className="px-4 py-8 text-sm text-[var(--muted)]">No people match this search.</p>
             ) : (
               visibleMembers.map((member) => (
-                <div key={member.name} className="flex items-center gap-3 border-b border-[var(--line)] px-4 py-3.5">
-                  <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-[11px] font-bold ${avatarClass(member.name)}`}>
+                <div key={member.name} className="mx-3 my-2 flex items-center gap-3 rounded-xl border border-[var(--line)] bg-white px-3.5 py-3 transition-colors duration-200 ease-out hover:bg-zinc-50 motion-reduce:transition-none">
+                  <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-full text-[11px] font-bold ${avatarClass(member.name)}`}>
                     {initials(member.name)}
                   </span>
                   <div className="min-w-0 flex-1">

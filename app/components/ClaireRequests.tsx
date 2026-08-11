@@ -28,7 +28,7 @@ type RequestItem = {
   state: string;
   stateNote: string;
   next: string;
-  actions: { label: string; prompt: string; primary?: boolean }[];
+  aiPrompt: string;
   coverage?: { name: string; detail: string; tone: StatusTone }[];
 };
 
@@ -51,11 +51,7 @@ const catalogue: RequestItem[] = [
     state: "1 open",
     stateNote: "business decision with you",
     next: "Choose Thomas’s later-session route so Learning Operations can finish the last person.",
-    actions: [
-      { label: "Review options", prompt: "Help me choose a later session for Thomas Bernard and explain the impact on my team deadline.", primary: true },
-      { label: "Open decision", prompt: "Show me the later-session choice for Thomas Bernard." },
-      { label: "Request a change", prompt: "I need to request a change to New Manager Foundations for my team." },
-    ],
+    aiPrompt: "Help me choose a later session for Thomas Bernard and explain the impact on my team deadline.",
     coverage: [
       { name: "10 managers", detail: "18 September · Paris", tone: "ok" },
       { name: "Priya Shah", detail: "22 September · alternative", tone: "ok" },
@@ -80,10 +76,7 @@ const catalogue: RequestItem[] = [
     state: "After deadline",
     stateNote: "impact on 30 September",
     next: "Compare later-session options and confirm the acceptable business trade-off. This does not change the 11 confirmed registrations.",
-    actions: [
-      { label: "Compare options", prompt: "Compare the later-session options for Thomas Bernard, including deadline and team coverage impact.", primary: true },
-      { label: "Keep open", prompt: "Keep Thomas Bernard open for another suitable session." },
-    ],
+    aiPrompt: "Compare the later-session options for Thomas Bernard, including deadline and team coverage impact.",
   },
   {
     id: "risk",
@@ -103,9 +96,7 @@ const catalogue: RequestItem[] = [
     state: "In review",
     stateNote: "with Training Coordination",
     next: "Training Coordination is checking curriculum fit and capacity before returning a plan for your confirmation.",
-    actions: [
-      { label: "Ask Assistant", prompt: "Help me prepare the next step for Risk & Conduct annual refresh.", primary: true },
-    ],
+    aiPrompt: "Help me prepare the next step for Risk & Conduct annual refresh.",
   },
   {
     id: "deputies",
@@ -125,9 +116,7 @@ const catalogue: RequestItem[] = [
     state: "Submitted",
     stateNote: "plan being prepared",
     next: "A feasible classroom option is being prepared. You will only return if a business trade-off is needed.",
-    actions: [
-      { label: "Ask Assistant", prompt: "Help me prepare the next step for Leadership essentials for Markets deputies.", primary: true },
-    ],
+    aiPrompt: "Help me prepare the next step for Leadership essentials for Markets deputies.",
   },
   {
     id: "cyber",
@@ -147,9 +136,7 @@ const catalogue: RequestItem[] = [
     state: "Confirmed",
     stateNote: "no action needed",
     next: "All 15 people have a confirmed learning path. No business decision is needed from you.",
-    actions: [
-      { label: "Ask Assistant", prompt: "Summarise progress for Cyber awareness for my direct reports." },
-    ],
+    aiPrompt: "Summarise progress for Cyber awareness for my direct reports.",
   },
   {
     id: "graduates",
@@ -169,9 +156,7 @@ const catalogue: RequestItem[] = [
     state: "Draft",
     stateNote: "not yet submitted",
     next: "Finish the cohort details, then send this business need to Training Coordination for feasibility checks.",
-    actions: [
-      { label: "Continue draft", prompt: "Help me finish Graduate onboarding learning and prepare it for Training Coordination.", primary: true },
-    ],
+    aiPrompt: "Help me finish Graduate onboarding learning and prepare it for Training Coordination.",
   },
   {
     id: "client",
@@ -191,9 +176,7 @@ const catalogue: RequestItem[] = [
     state: "Confirmed",
     stateNote: "with Learning Operations",
     next: "Learning Operations has the confirmed places. Ask the assistant only if you need a change.",
-    actions: [
-      { label: "Ask Assistant", prompt: "Help me prepare a change for Client-facing conduct for relationship managers." },
-    ],
+    aiPrompt: "Help me prepare a change for Client-facing conduct for relationship managers.",
   },
 ];
 
@@ -297,28 +280,13 @@ export function ClaireRequests({ onAskAssistant }: Props) {
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{request.summary}</p>
               <p className="mt-2 text-xs font-semibold text-zinc-500">{request.ref}</p>
             </div>
-            <div className="flex flex-wrap items-center gap-2">
-              {request.actions.map((action) => (
-                <button
-                  key={action.label}
-                  onClick={() => {
-                    if (action.label === "Open decision") {
-                      setSelected("thomas");
-                      return;
-                    }
-                    onAskAssistant(action.prompt);
-                  }}
-                  className={
-                    action.primary
-                      ? "inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
-                      : "inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-bold text-[var(--ink)] hover:bg-[var(--surface-hover)]"
-                  }
-                >
-                  {action.primary && <Bot size={15} />}
-                  {action.label}
-                </button>
-              ))}
-            </div>
+            <button
+              onClick={() => onAskAssistant(request.aiPrompt)}
+              className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--sg-red)] px-3.5 py-2 text-sm font-bold text-white transition-colors duration-200 ease-out hover:bg-[#c90319] motion-reduce:transition-none"
+            >
+              <Bot size={15} strokeWidth={1.8} />
+              Ask AI anything
+            </button>
           </div>
 
           <div className="sg-meta-grid mt-0">
