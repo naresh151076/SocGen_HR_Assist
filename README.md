@@ -27,8 +27,8 @@ The assistant can prepare, check, recommend, and simulate approved work. It must
 - A persistent rail-edge control that overlaps the navigation and workspace so collapse and expand remain available in both rail states.
 - Conversation-linked supporting documents: a fictional brief, checklist, or evidence note opens the expandable right panel only when a user selects that resource.
 - A **New chat** first state that matches conversation chrome: compact header, time-aware greeting, larger persona question, inline composer, governance note, and persona-specific quick-action cards with Lucide icons, chevron affordance, and reduced-motion-safe feedback.
-- Calm member rosters: white cards, neutral light-grey avatars, and restrained status chips reserve red for an actual exception or follow-up rather than every person.
-- Role-shaped full-bleed destinations for every persona (Claire: My requests / Team learning; Amélie: Plans / Capacity; Radu: Operations / Session readiness; Elena: Controls / Control health), using KPIs, donuts, progress bars and coverage rows rather than prose.
+- Calm member rosters: white cards, soft rose avatars, and restrained status chips; a compact `--sg-new` tenure mark for new joiners; red reserved for attention and follow-up.
+- Role-shaped full-bleed destinations for every persona (Claire: My requests / Team learning; Amélie: Plans / Capacity; Radu: Operations / Session readiness; Elena: Controls / Control health), using KPIs and shared on-brand chart primitives (split meters, waffle grids, ranked bars, arc gauges, donuts) rather than prose.
 - Persona **Help** from the profile menu: numbered ownership path, starter asks and limits, without long descriptions.
 - Accessible labels, visible focus treatment, and responsive layouts.
 

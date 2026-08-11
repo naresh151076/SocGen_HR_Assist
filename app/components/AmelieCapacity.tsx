@@ -51,13 +51,13 @@ export function AmelieCapacity({ onAskAssistant }: Props) {
             <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={() => onAskAssistant("Approve the session plan for Claire’s New Manager Foundations cohort.")}
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
+                className="sg-btn sg-btn-ink"
               >
                 <Bot size={15} /> Approve plan
               </button>
               <button
                 onClick={() => onAskAssistant("Find capacity for a cohort before 30 September.")}
-                className="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-bold text-[var(--ink)] hover:bg-[var(--surface-hover)]"
+                className="sg-btn sg-btn-secondary"
               >
                 Find capacity
               </button>
@@ -84,14 +84,14 @@ export function AmelieCapacity({ onAskAssistant }: Props) {
                   center={`${fill}%`}
                   centerLabel="FILL"
                   segments={[
-                    { value: scenario.requested, color: "var(--ink)" },
-                    { value: remaining, color: "var(--line)" },
+                    { value: scenario.requested, color: "var(--chart-strong)" },
+                    { value: remaining, color: "var(--chart-soft)" },
                   ]}
                   total={scenario.capacity}
                 />
                 <div className="space-y-3 text-sm">
-                  <Legend swatch="bg-[var(--ink)]" label="Requested" value={String(scenario.requested)} />
-                  <Legend swatch="bg-[var(--line)]" label="Free" value={String(remaining)} />
+                  <Legend swatch="bg-[var(--chart-strong)]" label="Requested" value={String(scenario.requested)} />
+                  <Legend swatch="bg-[var(--chart-soft)]" label="Free" value={String(remaining)} />
                 </div>
               </div>
             </section>
@@ -104,12 +104,12 @@ export function AmelieCapacity({ onAskAssistant }: Props) {
                 <Kpi label="Ref" value="0918" />
                 <Kpi label="From" value="Claire" />
               </div>
-              <div className="mt-4 flex items-center gap-2 rounded-lg border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
+              <div className="mt-4 flex items-center gap-2 rounded-full border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
                 <CircleAlert size={15} strokeWidth={1.8} className="shrink-0 text-[var(--sg-red)]" />
                 <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">Hand to Radu after publish</p>
                 <button
                   onClick={() => onAskAssistant("Approve the session plan for Claire’s New Manager Foundations cohort.")}
-                  className="ml-auto shrink-0 text-sm font-bold text-[var(--sg-red)] hover:underline"
+                  className="sg-btn sg-btn-primary sg-btn-compact ml-auto shrink-0"
                 >
                   Publish
                 </button>
@@ -123,7 +123,7 @@ export function AmelieCapacity({ onAskAssistant }: Props) {
               {timeline.map((slot) => (
                 <div
                   key={slot.day}
-                  className={`border px-3 py-4 text-center ${slot.fill ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[var(--line)]"}`}
+                  className={`border px-3 py-4 text-center ${slot.fill ? "border-[var(--chart-strong)] bg-[var(--chart-strong)] text-white" : "border-[var(--line)]"}`}
                 >
                   <p className={`text-xs font-bold uppercase tracking-[.12em] ${slot.fill ? "text-white/70" : "text-[var(--muted)]"}`}>{slot.day}</p>
                   <p className={`mt-2 text-sm font-bold ${slot.fill ? "text-white" : "text-[var(--ink)]"}`}>{slot.label}</p>

@@ -282,7 +282,7 @@ export function ClaireRequests({ onAskAssistant }: Props) {
             </div>
             <button
               onClick={() => onAskAssistant(request.aiPrompt)}
-              className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[var(--sg-red)] px-3.5 py-2 text-sm font-bold text-white transition-colors duration-200 ease-out hover:bg-[#c90319] motion-reduce:transition-none"
+              className="sg-btn sg-btn-primary shrink-0"
             >
               <Bot size={15} strokeWidth={1.8} />
               Ask AI anything

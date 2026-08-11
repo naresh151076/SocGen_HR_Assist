@@ -100,13 +100,13 @@ export function RaduReadiness({ onAskAssistant }: Props) {
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => setView(view === "outcome" ? "check" : "outcome")}
-                  className="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-bold text-[var(--ink)] hover:bg-[var(--surface-hover)]"
+                  className="sg-btn sg-btn-secondary"
                 >
                   {view === "outcome" ? "Show check" : "Show outcome"}
                 </button>
                 <button
                   onClick={() => onAskAssistant("Review exceptions for the New Manager Foundations registration check.")}
-                  className="inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
+                  className="sg-btn sg-btn-ink"
                 >
                   <Bot size={15} /> Review exceptions
                 </button>
@@ -133,14 +133,14 @@ export function RaduReadiness({ onAskAssistant }: Props) {
                     center={`${readiness}%`}
                     centerLabel={view === "check" ? "READY" : "DONE"}
                     segments={[
-                      { value: readyCount, color: "var(--ink)" },
-                      { value: scenario.requested - readyCount, color: "var(--sg-red)" },
+                      { value: readyCount, color: "var(--chart-strong)" },
+                      { value: scenario.requested - readyCount, color: "rgba(233, 4, 30, 0.45)" },
                     ]}
                     total={scenario.requested}
                   />
                   <div className="space-y-3 text-sm">
-                    <Legend swatch="bg-[var(--ink)]" label={view === "check" ? "Ready" : "Confirmed"} value={String(readyCount)} />
-                    <Legend swatch="bg-[var(--sg-red)]" label="Open" value={String(scenario.requested - readyCount)} />
+                    <Legend swatch="bg-[var(--chart-strong)]" label={view === "check" ? "Ready" : "Confirmed"} value={String(readyCount)} />
+                    <Legend swatch="bg-[rgba(233,4,30,0.42)]" label="Open" value={String(scenario.requested - readyCount)} />
                   </div>
                 </div>
               </section>
@@ -153,7 +153,7 @@ export function RaduReadiness({ onAskAssistant }: Props) {
                   <Kpi label="Trainer" value="Victor" />
                   <Kpi label="Invites" value={view === "outcome" ? "11" : "0"} attention={view === "check"} />
                 </div>
-                <div className="mt-4 flex items-center gap-2 rounded-lg border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
+                <div className="mt-4 flex items-center gap-2 rounded-full border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
                   <CircleAlert size={15} strokeWidth={1.8} className="shrink-0 text-[var(--sg-red)]" />
                   <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">
                     {view === "check" ? "Priya · Thomas" : "Thomas · later session"}
@@ -166,7 +166,7 @@ export function RaduReadiness({ onAskAssistant }: Props) {
                           : "Summarise the Thomas Bernard follow-up hold for New Manager Foundations."
                       )
                     }
-                    className="ml-auto shrink-0 text-sm font-bold text-[var(--sg-red)] hover:underline"
+                    className="sg-btn sg-btn-primary sg-btn-compact ml-auto shrink-0"
                   >
                     {view === "check" ? "Ask Claire" : "Open hold"}
                   </button>

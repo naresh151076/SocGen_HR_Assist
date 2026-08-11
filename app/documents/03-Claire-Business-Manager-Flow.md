@@ -140,10 +140,10 @@ The My requests destination is a full-width master-detail inbox for Claire’s b
 
 Team learning is Claire’s **Markets & Risk** unit overview for HR transformation via conversation — not an LMS or reporting console. It answers who is on the team, who is new vs established, who needs action, and who needs what.
 
-- Full-width chart workspace: team mix, training status, who-needs-what bars, and the active NMF-042 case.
-- Right-hand **Team members** panel: search, status filters, neutral initials avatars, role, tenure and learning status. White member cards keep the roster quiet; red appears only for an actual exception or follow-up.
+- Full-width chart workspace: team-mix split meter, training-status waffle, ranked who-needs-what bars, and an active NMF-042 arc gauge.
+- Right-hand **Team members** panel: search, status filters, and a three-column card grid with soft rose initials avatars, compact new-joiner marks, and status on each card.
 - Compact KPIs for My team / New / Established / Need action / Up to date.
-- Open follow-ups (for example Thomas Bernard) route back into the conversational assistant for the business choice.
+- A single SG-red pill **AskAI** control (and Thomas resolve on the active case) routes back into the conversational assistant for the unit learning context.
 - No registration, invitation or control actions are available here; those stay with Learning Operations and Control personas.
 
 ### C10 — Help (implemented)
@@ -183,6 +183,6 @@ Claire is the **business consumer** of learning operations in an HR transformati
 | Approves | Business trade-offs only | Plan feasibility | Operational publish / send | Control close / remediation |
 | Does not see | Ops queues, rule engines, control consoles | Business unit dashboards | Claire’s team overview | Demand intake as primary work |
 
-**Demo path for Claire:** Home → New chat (“What does your team need to learn?”) → raise or continue a cohort request → My requests for status and decisions → Team learning for Markets & Risk readiness → Ask assistant / Open follow-up returns to conversation. Help stays in the profile menu so guidance never competes with chat.
+**Demo path for Claire:** Home → New chat (“What does your team need to learn?”) → raise or continue a cohort request → My requests for status and decisions → Team learning for Markets & Risk readiness → **AskAI** returns to conversation with that unit’s learning context. Help stays in the profile menu so guidance never competes with chat.
 
 **Transformation message:** Existing systems of record stay in the background. Claire does not learn Mandarin, MyLearning or Neocase. She asks in language, sees unit readiness at a glance, and returns only when a named business decision is required.

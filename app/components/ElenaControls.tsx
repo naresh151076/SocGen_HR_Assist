@@ -267,8 +267,8 @@ export function ElenaControls({ onAskAssistant }: Props) {
                   }}
                   className={
                     action.primary
-                      ? "inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
-                      : "inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-bold text-[var(--ink)] hover:bg-[var(--surface-hover)]"
+                      ? "sg-btn sg-btn-ink"
+                      : "sg-btn sg-btn-secondary"
                   }
                 >
                   {action.primary && <Bot size={15} />}

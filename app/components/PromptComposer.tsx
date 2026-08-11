@@ -20,7 +20,7 @@ export function PromptComposer({ onSend, placeholder = "Describe the learning op
           className="min-h-[44px] w-full resize-none border-0 bg-transparent py-2.5 text-[15px] leading-6 outline-none placeholder:text-zinc-400"
         />
         <button title="Voice input" aria-label="Voice input" className="mb-1 rounded-lg p-2 text-zinc-500 hover:bg-zinc-100"><Mic size={18} /></button>
-        <button onClick={submit} aria-label="Send request" className="mb-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--sg-red)] text-white hover:bg-[#c70419]"><Send size={16} /></button>
+        <button onClick={submit} aria-label="Send request" className="mb-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--sg-red)] text-white hover:bg-[#c70419]"><Send size={16} /></button>
       </div>
     </div>
   );

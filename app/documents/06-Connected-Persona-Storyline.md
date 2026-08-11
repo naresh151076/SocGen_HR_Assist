@@ -52,7 +52,7 @@ Each persona has Assistant plus two role-shaped full-bleed destinations; Help st
 
 Selecting **New chat** opens a conversation-shaped first state: the same compact header treatment as an active thread (title and overflow menu only—no status pills), a time-aware first-name greeting, a larger persona question as the landing title, an inline composer, a short governance boundary, and suggested starts (icon + short label only). When the user sends a request, the assistant responds with persona-relevant mock content and may offer a linked fictional brief, checklist or evidence note. That message-level link—not a generic workspace control—opens the supporting-details panel. Closing the panel preserves the conversation and its linked resource.
 
-Support destinations stay infographic-first: KPIs, donuts, progress bars, status chips and coverage rows. Consequential actions route back into the conversational assistant with that persona’s existing chat scenario. Compact ownership strips show handoffs (Claire ↔ Amélie ↔ Radu ↔ Elena) without merging personas into one chat.
+Support destinations stay infographic-first: KPIs, varied chart primitives (split meters, waffle grids, ranked bars, arc gauges, donuts), status chips and coverage rows. Consequential actions route back into the conversational assistant with that persona’s existing chat scenario. Compact ownership strips show handoffs (Claire ↔ Amélie ↔ Radu ↔ Elena) without merging personas into one chat.
 
 ## Presentation rule
 

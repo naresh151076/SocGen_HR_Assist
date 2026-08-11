@@ -68,7 +68,7 @@ export function ClaireHelp({ onAskAssistant }: Props) {
             </div>
             <button
               onClick={() => onAskAssistant("I need mandatory learning for a new team")}
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
+              className="sg-btn sg-btn-ink"
             >
               <Bot size={15} /> Open a conversation
             </button>

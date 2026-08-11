@@ -45,13 +45,13 @@ export function ElenaHealth({ onAskAssistant }: Props) {
             <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={() => onAskAssistant("Approve the INV-04 remediation and send one replacement invitation.")}
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
+                className="sg-btn sg-btn-ink"
               >
                 <Bot size={15} /> Approve remediation
               </button>
               <button
                 onClick={() => onAskAssistant("Open the INV-04 evidence note for this week’s invitation control.")}
-                className="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-sm font-bold text-[var(--ink)] hover:bg-[var(--surface-hover)]"
+                className="sg-btn sg-btn-secondary"
               >
                 Evidence
               </button>
@@ -78,14 +78,14 @@ export function ElenaHealth({ onAskAssistant }: Props) {
                   center={`${passRate}%`}
                   centerLabel="MATCH"
                   segments={[
-                    { value: matched, color: "var(--ink)" },
-                    { value: open, color: "var(--sg-red)" },
+                    { value: matched, color: "var(--chart-strong)" },
+                    { value: open, color: "rgba(233, 4, 30, 0.45)" },
                   ]}
                   total={scenario.confirmed}
                 />
                 <div className="space-y-3 text-sm">
-                  <Legend swatch="bg-[var(--ink)]" label="Matched" value={String(matched)} />
-                  <Legend swatch="bg-[var(--sg-red)]" label="Open" value={String(open)} />
+                  <Legend swatch="bg-[var(--chart-strong)]" label="Matched" value={String(matched)} />
+                  <Legend swatch="bg-[rgba(233,4,30,0.42)]" label="Open" value={String(open)} />
                 </div>
               </div>
             </section>
@@ -98,12 +98,12 @@ export function ElenaHealth({ onAskAssistant }: Props) {
                 <Kpi label="Session" value="0918" />
                 <Kpi label="From" value="Radu" />
               </div>
-              <div className="mt-4 flex items-center gap-2 rounded-lg border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
+              <div className="mt-4 flex items-center gap-2 rounded-full border border-[var(--sg-red-border)] bg-[var(--sg-red-soft)] px-3 py-2.5">
                 <CircleAlert size={15} strokeWidth={1.8} className="shrink-0 text-[var(--sg-red)]" />
                 <p className="min-w-0 truncate text-sm font-bold text-[var(--ink)]">{scenario.controlParticipant} · invite repair</p>
                 <button
                   onClick={() => onAskAssistant("Approve the INV-04 remediation and send one replacement invitation.")}
-                  className="ml-auto shrink-0 text-sm font-bold text-[var(--sg-red)] hover:underline"
+                  className="sg-btn sg-btn-primary sg-btn-compact ml-auto shrink-0"
                 >
                   Resolve
                 </button>

@@ -4,13 +4,17 @@
 
 /*
   Societe Generale–inspired product tokens.
-  Brand identity: black + white surfaces, SG red as the only accent.
-  Avoid rainbow status colours (emerald/amber/sky) in product UI.
+  Brand identity: black + white surfaces, SG red as the primary accent.
+  One restrained tenure accent (--sg-new) is allowed for “new joiner” markers only.
+  Avoid rainbow status colours (loud emerald/amber/sky/purple) elsewhere in product UI.
 */
 :root {
   --sg-red: #e9041e;
   --sg-red-soft: #fff0f1;
   --sg-red-border: rgba(233, 4, 30, 0.28);
+  --sg-new: #7d9448;
+  --sg-new-soft: #f3f6ec;
+  --sg-new-border: rgba(125, 148, 72, 0.28);
   --sg-black: #202124;
   --ink: #202124;
   --muted: #6b7078;
@@ -19,6 +23,10 @@
   --surface: #ffffff;
   --surface-subtle: #f5f5f5;
   --surface-hover: #f0f0f0;
+  --chart-track: #f0f0f0;
+  --chart-soft: #dcdcdc;
+  --chart-mid: #a8adb4;
+  --chart-strong: #6b7078;
   --rail: #202124;
   --panel-header-height: 56px;
   --type-xs: 0.75rem;
@@ -146,6 +154,79 @@ textarea:focus-visible { outline: none; }
   border-color: var(--ink);
   background: var(--ink);
   color: white;
+}
+
+/* Pill CTAs — shared across destinations (SG-style rounded capsules) */
+.sg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out;
+}
+.sg-btn-primary {
+  border: 1px solid transparent;
+  background: var(--sg-red);
+  color: #fff;
+}
+.sg-btn-primary:hover { background: #c90319; }
+.sg-btn-ink {
+  border: 1px solid transparent;
+  background: var(--ink);
+  color: #fff;
+}
+.sg-btn-ink:hover { background: #000; }
+.sg-btn-secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+.sg-btn-secondary:hover {
+  border-color: #d4d4d4;
+  background: var(--surface-hover);
+}
+.sg-btn-compact {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.sg-badge-new {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: 999px;
+  border: 1px solid var(--sg-new-border);
+  background: var(--sg-new-soft);
+  padding: 2px 6px 2px 4px;
+  color: var(--sg-new);
+  pointer-events: none;
+}
+.sg-badge-new-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.sg-status-card {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sg-meta-grid {

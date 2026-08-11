@@ -191,13 +191,13 @@ export function ConversationThread({
             <div className="flex flex-wrap gap-2.5 pt-1">
               <button
                 onClick={() => (onPrimaryAction ? onPrimaryAction() : onOpenResource(resource))}
-                className="inline-flex items-center rounded-lg bg-[var(--sg-red)] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#c70419]"
+                className="sg-btn sg-btn-primary"
               >
                 {scenario.primaryAction}
               </button>
               <button
                 onClick={() => onOpenResource(resource)}
-                className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-bold text-zinc-700 hover:border-zinc-400 hover:bg-zinc-50"
+                className="sg-btn sg-btn-secondary"
               >
                 <FileCheck2 size={15} className="text-[var(--sg-red)]" />
                 {scenario.secondaryAction}

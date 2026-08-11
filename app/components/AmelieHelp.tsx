@@ -58,7 +58,7 @@ export function AmelieHelp({ onAskAssistant }: Props) {
             <h2 className="text-xl font-bold tracking-tight text-[var(--ink)] md:text-2xl">Planning path</h2>
             <button
               onClick={() => onAskAssistant("Validate a programme plan")}
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--ink)] px-3.5 py-2 text-sm font-bold text-white hover:bg-black"
+              className="sg-btn sg-btn-ink"
             >
               <Bot size={15} /> Open a conversation
             </button>

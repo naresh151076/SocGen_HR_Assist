@@ -73,8 +73,8 @@ function GuidedConversation({stage,replies,onAdvance,switchPersona,onOpenResourc
           {meta.verification&&<VerificationCard id={meta.verification.id} detail={meta.verification.detail} badge={meta.verification.badge}/>}
           {meta.alert&&<AlertCard title={meta.alert.title} detail={meta.alert.detail}/>}
           <div className="flex flex-wrap gap-2.5">
-            {turn.action&&<button onClick={()=>{if(turn.nextPersona)switchPersona(turn.nextPersona,true);onAdvance();}} className="inline-flex items-center gap-2 rounded-lg bg-[var(--sg-red)] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#c70419]">{turn.action}<ArrowRight size={15}/></button>}
-            <button onClick={()=>onOpenResource(resource)} className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-4 py-2.5 text-sm font-bold text-zinc-700 hover:border-zinc-400 hover:bg-zinc-50"><FileCheck2 size={15} className="text-[var(--sg-red)]"/>Open source evidence</button>
+            {turn.action&&<button onClick={()=>{if(turn.nextPersona)switchPersona(turn.nextPersona,true);onAdvance();}} className="sg-btn sg-btn-primary">{turn.action}<ArrowRight size={15}/></button>}
+            <button onClick={()=>onOpenResource(resource)} className="sg-btn sg-btn-secondary"><FileCheck2 size={15} className="text-[var(--sg-red)]"/>Open source evidence</button>
           </div>
           {turn.question&&<p className="text-sm font-semibold text-zinc-700">{turn.question}{nextName?` On confirmation, this hands to ${nextName}.`:""}</p>}
         </div>
@@ -100,7 +100,7 @@ export function Workbench({stage,setStage,section,persona,switchPersona,mode,con
   useEffect(()=>{document.querySelector<HTMLElement>(".workspace-scroll")?.scrollTo({top:0,behavior:"smooth"})},[stage,persona.id,section]);
   const advanceDemo=()=>setStage(Math.min(stage+1,guidedTurns.length) as Stage);
   function shell(content:React.ReactNode,showComposer=false,fullWidth=false){const conversationShell=mode==="chat"||mode==="demo"||fullWidth;return <div className={`${conversationShell?"w-full":"mx-auto max-w-5xl"} pb-[160px]`}>{content}{showComposer ? (<div className="conversation-composer fixed bottom-4 z-30 lg:bottom-5"><PromptComposer onSend={(prompt)=>{if(mode==="demo"){setDemoReplies(replies=>[...replies,{afterStage:stage,text:prompt}]);}else onStartChat(prompt)}} placeholder={mode==="demo"?"Reply to the assistant…":"Ask a follow-up about this request…"}/></div>) : null}</div>}
-  if(section==="assistant"&&mode==="home") return <div className="mx-auto max-w-5xl pt-4 md:pt-8"><header className="flex flex-wrap items-start justify-between gap-4"><HomeGreeting name={persona.name}/><button onClick={onStartDemo} className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-sm font-bold text-zinc-700 transition hover:border-zinc-400 hover:bg-zinc-50"><Route size={16}/>Open example request</button></header><div className="mt-6"><ActivityChart/></div></div>;
+  if(section==="assistant"&&mode==="home") return <div className="mx-auto max-w-5xl pt-4 md:pt-8"><header className="flex flex-wrap items-start justify-between gap-4"><HomeGreeting name={persona.name}/><button onClick={onStartDemo} className="sg-btn sg-btn-secondary"><Route size={16}/>Open example request</button></header><div className="mt-6"><ActivityChart/></div></div>;
   if(section==="assistant"&&mode==="new") return <NewChatLanding persona={persona} onStartChat={onStartChat} onStartDemo={onStartDemo}/>;
   if(section==="assistant"&&mode==="chat") return shell(<ConversationThread persona={persona} prompt={conversationPrompt} onOpenResource={onOpenResource}/>,true);
   if(mode==="demo") return shell(<GuidedConversation stage={stage} replies={demoReplies} onAdvance={advanceDemo} switchPersona={switchPersona} onOpenResource={onOpenResource}/>,true);

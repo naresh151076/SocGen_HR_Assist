@@ -8,7 +8,7 @@
 
 ## UI system
 
-- Brand identity follows Société Générale: black and white surfaces, SG red (`--sg-red`) as the only accent. Do not introduce emerald, amber, sky, or purple status colours in product UI.
+- Brand identity follows Société Générale: black and white surfaces, SG red (`--sg-red`) as the primary accent. A single restrained tenure accent (`--sg-new`, soft olive) may mark new joiners only. Do not introduce loud emerald, amber, sky, or purple status colours elsewhere in product UI.
 - Prefer shared tokens and primitives in `app/globals.css` (`.sg-status-*`, `.sg-list-row`, `.sg-callout`, `.sg-progress`, `.sg-fact`, `.sg-row`) over one-off colour utilities.
 - Status language stays restrained: attention uses soft red; confirmed/neutral uses black text on light grey. Icons default to muted/ink; red only for attention.
 - Use `lucide-react` for all interface icons. Prefer a single 1.8–2px outlined style; do not mix icon libraries or introduce emoji as UI icons.
