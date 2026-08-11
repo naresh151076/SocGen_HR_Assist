@@ -143,7 +143,7 @@ export function ClaireLearning({ onAskAssistant }: Props) {
                 <span className="sg-status sg-status-attention">{team.total - team.upToDate} need action</span>
               </div>
               <button onClick={() => onAskAssistant(askTeamPrompt)} className="sg-btn sg-btn-primary">
-                <Bot size={15} strokeWidth={1.8} /> AskAI
+                <Bot size={15} strokeWidth={1.8} /> Ask AI
               </button>
             </div>
 

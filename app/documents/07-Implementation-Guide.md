@@ -28,12 +28,12 @@ This repository is a front-end-only prototype of the SG Learning Operations prod
 | `app/data/conversations.ts` | Fictional chat scenarios plus persona work-package, evidence-reference and approval-boundary content |
 | `app/components/PromptComposer.tsx` | Reusable governed-workflow composer |
 | `app/components/QuickActions.tsx` | Persona-specific action shortcuts (icon + short label) |
-| `app/components/SgCharts.tsx` | Shared on-brand chart primitives (donut, split meter, waffle, ranked bars, arc gauge), KPI, legend, pipeline and consistent soft-rose avatar helpers for oversight boards |
+| `app/components/SgCharts.tsx` | Shared on-brand chart primitives (donut, split meter, waffle, ranked bars, arc gauge), KPI, legend, pipeline and consistent light-grey avatar helpers for oversight boards |
 | `app/globals.css` | Shared SG brand tokens and UI primitives (pill `.sg-btn*` CTAs, status, list rows, callouts, progress, chart greys, `--sg-new` tenure accent) used across destinations |
 
 ## Member roster treatment
 
-Person selection and search views use quiet white cards with soft rose avatars. Red is reserved for attention states and follow-ups; the `--sg-new` olive accent marks new joiners only. This keeps dense rosters scannable without hiding decision-required states.
+Person selection and search views use quiet white cards with light-grey avatars and muted initials. Red is reserved for attention states and follow-ups; the `--sg-new` olive accent marks new joiners only. This keeps dense rosters scannable without hiding decision-required states.
 | `app/components/ClaireRequests.tsx` / `ClaireLearning.tsx` / `ClaireHelp.tsx` | Claire business destinations |
 | `app/components/AmeliePlans.tsx` / `AmelieCapacity.tsx` / `AmelieHelp.tsx` | Amélie planning destinations |
 | `app/components/RaduOperations.tsx` / `RaduReadiness.tsx` / `RaduHelp.tsx` | Radu operations destinations |

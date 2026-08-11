@@ -278,8 +278,8 @@ export function Pipeline({
   );
 }
 
-/** Soft rose disc + SG-red initials — consistent across oversight rosters. */
-export const avatarClassName = "bg-[var(--sg-red-soft)] text-[var(--sg-red)]";
+/** Quiet light-grey disc + muted initials — keep red for attention states only. */
+export const avatarClassName = "bg-[var(--surface-subtle)] text-[var(--muted)]";
 
 export function initials(name: string) {
   return name

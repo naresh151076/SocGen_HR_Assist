@@ -285,7 +285,7 @@ export function ClaireRequests({ onAskAssistant }: Props) {
               className="sg-btn sg-btn-primary shrink-0"
             >
               <Bot size={15} strokeWidth={1.8} />
-              Ask AI anything
+              Ask AI
             </button>
           </div>
 
